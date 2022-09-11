@@ -1,6 +1,6 @@
 # Rhino - GrassHopper - Python Studies - Notes
 
-*ETH MAS dfab | Zac Zhuo Zhang*
+*Zac Zhuo Zhang*
 
 ---
 
