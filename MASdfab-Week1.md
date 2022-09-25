@@ -270,7 +270,7 @@ myMessage = Message
                 self.MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness), CircleSize
             )
 
-        def FibonacciSharpness(PiceNumber, Sharpness):
+        def FibonacciSharpness(self, PiceNumber, Sharpness):
             zSharpness = []
             zSharpness.append(Sharpness)
             zSharpness.append(Sharpness)
