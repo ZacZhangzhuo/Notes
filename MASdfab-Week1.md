@@ -266,11 +266,11 @@ myMessage = Message
             self.sharpness = Sharpness
             self.circle = CircleSize
             self.circleRotation = CircleRotation
-            self.circles = self.MakeSpiralCircles(
-                self.MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness), CircleSize
+            self.circles = self.__MakeSpiralCircles(
+                self.__MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness), CircleSize
             )
 
-        def FibonacciSharpness(self, PiceNumber, Sharpness):
+        def __FibonacciSharpness(PiceNumber, Sharpness):
             zSharpness = []
             zSharpness.append(Sharpness)
             zSharpness.append(Sharpness)
@@ -278,7 +278,7 @@ myMessage = Message
                 zSharpness.append(zSharpness[i] + zSharpness[i + 1])
             return zSharpness
 
-        def RotateCircle(self,circle, rotation):
+        def __RotateCircle(self,circle, rotation):
             # circle = rg.Circle(x)
             circle.Transform(
                 rg.Transform.Rotation(
@@ -289,7 +289,7 @@ myMessage = Message
             )
             return circle
 
-        def MakeSpiralPoints(self, NautilusSize, PiceSize, PiceNumber, Sharpness):
+        def __MakeSpiralPoints(self, NautilusSize, PiceSize, PiceNumber, Sharpness):
             # Outcome point3d[]
             points = []
             for t in range(PiceNumber):
@@ -303,7 +303,7 @@ myMessage = Message
 
             return points
 
-        def MakeSpiralCircles(self, SpiralPoints, Size):
+        def __MakeSpiralCircles(self, SpiralPoints, Size):
             circles = []
             for i in range(len(SpiralPoints) - 1):
                 # Make the vector
@@ -320,7 +320,7 @@ myMessage = Message
 
                 # Make circle
                 circle = rg.Circle(plane, Size * (i + 1))
-                circles.append(self.RotateCircle(circle, (i / (len(SpiralPoints) - 1)) * CircleRotation))
+                circles.append(self.__RotateCircle(circle, (i / (len(SpiralPoints) - 1)) * CircleRotation))
 
             return circles
 
@@ -351,4 +351,5 @@ myMessage = Message
     Objects = nautilus.object()
     Colours = nautilus.colours()
     Circles = nautilus.circles
+
 ```
