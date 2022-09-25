@@ -22,8 +22,8 @@ class Nautilus(object):
         self.sharpness = Sharpness
         self.circle = CircleSize
         self.circleRotation = CircleRotation
-        self.circles = MakeSpiralCircles(
-            MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness), CircleSize
+        self.circles = self.__MakeSpiralCircles(
+            self.__MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness), CircleSize
         )
 
     def __FibonacciSharpness(PiceNumber, Sharpness):
@@ -34,7 +34,7 @@ class Nautilus(object):
             zSharpness.append(zSharpness[i] + zSharpness[i + 1])
         return zSharpness
 
-    def __RotateCircle(circle, rotation):
+    def __RotateCircle(self,circle, rotation):
         # circle = rg.Circle(x)
         circle.Transform(
             rg.Transform.Rotation(
@@ -45,7 +45,7 @@ class Nautilus(object):
         )
         return circle
 
-    def __MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness):
+    def __MakeSpiralPoints(self, NautilusSize, PiceSize, PiceNumber, Sharpness):
         # Outcome point3d[]
         points = []
         for t in range(PiceNumber):
@@ -59,7 +59,7 @@ class Nautilus(object):
 
         return points
 
-    def __MakeSpiralCircles(SpiralPoints, Size):
+    def __MakeSpiralCircles(self, SpiralPoints, Size):
         circles = []
         for i in range(len(SpiralPoints) - 1):
             # Make the vector
@@ -76,7 +76,7 @@ class Nautilus(object):
 
             # Make circle
             circle = rg.Circle(plane, Size * (i + 1))
-            circles.append(RotateCircle(circle, (i / (len(SpiralPoints) - 1)) * CircleRotation))
+            circles.append(self.__RotateCircle(circle, (i / (len(SpiralPoints) - 1)) * CircleRotation))
 
         return circles
 
