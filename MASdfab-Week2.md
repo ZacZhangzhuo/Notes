@@ -15,3 +15,7 @@
         r = deepcopy(rectangle)
         degree = math.radians(random.randint(-rectangle, Corner(2).Y))
 ```
+
+## Interval 
+* Represents an interval in one-dimensional space, that is defined as two extrema or bounds.
+* https://developer.rhino3d.com/api/RhinoCommon/html/T_Rhino_Geometry_Interval.htm
