@@ -2,7 +2,7 @@
 
 ---
 
-## 1. <a name='Enumeration'></a>Enumeration
+## Enumeration
 
 ```Python
     for i, rectangle in enumerate(geo): #!
@@ -16,6 +16,24 @@
         degree = math.radians(random.randint(-rectangle, Corner(2).Y))
 ```
 
-## Interval 
-* Represents an interval in one-dimensional space, that is defined as two extrema or bounds.
-* https://developer.rhino3d.com/api/RhinoCommon/html/T_Rhino_Geometry_Interval.htm
+## Interval
+
+- Represents an interval in one-dimensional space, that is defined as two extrema or bounds.
+- https://developer.rhino3d.com/api/RhinoCommon/html/T_Rhino_Geometry_Interval.htm
+
+## Read images
+
+```Python
+    import System
+    import os
+
+    HERE = ghenv.LocalScope.ghdoc.Path
+    dir_path = os.path.dirname(HERE)
+    bitmap = System.Drawing.Image.FromFile(dir_path + "\\" + inTemp + ".png")
+
+    deltaPixelX = bitmap.Width / nx
+    deltaPixelT = bitmap.Height / ny
+
+    # Ask the colour of the pixie
+    color = System.Drawing.Bitmap.GetPixel(bitmap, x, y)
+```
