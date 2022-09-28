@@ -2,7 +2,22 @@
 
 ---
 
-## Enumeration
+Contents
+<!-- vscode-markdown-toc -->
+* 1. [Enumeration](#Enumeration)
+* 2. [Interval](#Interval)
+* 3. [Read images](#Readimages)
+* 4. [Remap function](#Remapfunction)
+* 5. [Ask the colour of the pixie](#Askthecolourofthepixie)
+* 6. [Mesh Colour (Colour is stored in the vertex data)](#MeshColourColourisstoredinthevertexdata)
+
+<!-- vscode-markdown-toc-config
+	numbering=false
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Enumeration'></a>Enumeration
 
 ```Python
     for i, rectangle in enumerate(geo): #!
@@ -16,12 +31,12 @@
         degree = math.radians(random.randint(-rectangle, Corner(2).Y))
 ```
 
-## Interval
+##  2. <a name='Interval'></a>Interval
 
 - Represents an interval in one-dimensional space, that is defined as two extrema or bounds.
 - https://developer.rhino3d.com/api/RhinoCommon/html/T_Rhino_Geometry_Interval.htm
 
-## Read images
+##  3. <a name='Readimages'></a>Read images
 
 ```Python
     import System
@@ -38,7 +53,7 @@
     color = System.Drawing.Bitmap.GetPixel(bitmap, x, y)
 ```
 
-## Remap function
+##  4. <a name='Remapfunction'></a>Remap function
 
 ```Python
     def remap(value, low1, high1, low2, high2):
@@ -46,7 +61,7 @@
         return new_value
 ```
 
-## Ask the colour of the pixie
+##  5. <a name='Askthecolourofthepixie'></a>Ask the colour of the pixie
 
 ```Python
     import System
@@ -63,7 +78,7 @@
     color = System.Drawing.Bitmap.GetPixel(bitmap, x, y)
 ```
 
-## Mesh Colour (Colour is stored in the vertex data)
+##  6. <a name='MeshColourColourisstoredinthevertexdata'></a>Mesh Colour (Colour is stored in the vertex data)
 
 ```Python
     box_mesh.VertexColors.CreateMonotoneMesh(self.color)
