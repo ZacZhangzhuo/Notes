@@ -1,7 +1,7 @@
 # htmlAndCssStudies
 
 ```html
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -80,5 +80,10 @@
     <a href="mailto:ArchZ@outlook.com">Email me</a>
   </body>
 </html>
+```
 
+```CSS
+  .img:hover {
+    /* only apply when hover. Pseudo Class */
+  }
 ```

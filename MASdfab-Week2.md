@@ -37,3 +37,28 @@
     # Ask the colour of the pixie
     color = System.Drawing.Bitmap.GetPixel(bitmap, x, y)
 ```
+
+## Remap function
+
+```Python
+    def remap(value, low1, high1, low2, high2):
+        new_value = low2 + (value-low1)*(high2-low2)/(high1-low1)
+        return new_value
+```
+
+## Ask the colour of the pixie
+
+```Python
+    import System
+    import os
+
+    HERE = ghenv.LocalScope.ghdoc.Path
+    dir_path = os.path.dirname(HERE)
+    bitmap = System.Drawing.Image.FromFile(dir_path + "\\" + inTemp + ".png")
+
+    deltaPixelX = bitmap.Width / nx
+    deltaPixelT = bitmap.Height / ny
+
+    # Ask the colour of the pixie
+    color = System.Drawing.Bitmap.GetPixel(bitmap, x, y)
+```
