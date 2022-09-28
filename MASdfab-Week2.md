@@ -62,3 +62,9 @@
     # Ask the colour of the pixie
     color = System.Drawing.Bitmap.GetPixel(bitmap, x, y)
 ```
+
+## Mesh Colour (Colour is stored in the vertex data)
+
+```Python
+    box_mesh.VertexColors.CreateMonotoneMesh(self.color)
+```

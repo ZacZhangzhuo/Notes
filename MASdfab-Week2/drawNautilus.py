@@ -11,7 +11,9 @@ from ghpythonlib.components import ColourRGB
 # Sharpness
 # CircleSize
 # CircleRotation
-SketchLines1Extend = 100
+SketchParam1 = 80
+SketchParam2 = 50
+SketchParam3 = 80
 
 # CLASS
 class Nautilus(object):
@@ -24,13 +26,16 @@ class Nautilus(object):
         self.circle = CircleSize
         self.circleRotation = CircleRotation
         self.Sketch = Sketch()
+        self.SketchPoints = []
         self.SketchLines1 = []
         self.SketchLines2 = []
         self.SketchLines3 = []
         self.SketchLines4 = []
         self.SketchLines5 = []
         self.circles = self.__MakeSpiralCircles(
-            self.__MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness), CircleSize
+            self.__MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness),
+            CircleSize,
+            self.SketchPoints,
         )
         self.objects = self.__makeObjects()
         self.colours = self.__makeColours()
@@ -43,7 +48,7 @@ class Nautilus(object):
             zSharpness.append(zSharpness[i] + zSharpness[i + 1])
         return zSharpness
 
-    def __RotateCircle(self, circle, rotation):
+    def __Rotate(self, circle, rotation):
         # circle = rg.Circle(x)
         circle.Transform(
             rg.Transform.Rotation(
@@ -59,7 +64,7 @@ class Nautilus(object):
         points = []
         sketchPoints = []
 
-        for t in range(PiceNumber + SketchLines1Extend):
+        for t in range(PiceNumber + SketchParam1):
             r = NautilusSize * t
             x = r * math.cos(2 * math.pi * t * PiceSize * 0.1)
             y = r * math.sin(2 * math.pi * t * PiceSize * 0.1)
@@ -71,17 +76,20 @@ class Nautilus(object):
             sketchPoints.append(rg.Point3d(x, y, Sharpness * t * t))
 
         # * Sketch
-        self.SketchLines1 = self.Sketch.PointsToCurve(sketchPoints)
+        if IsSketch:
+            self.SketchLines1 = self.Sketch.PointsToCurve(sketchPoints)
+        self.SketchPoints = sketchPoints
 
         return points
 
-    def __MakeSpiralCircles(self, SpiralPoints, Size):
+    def __MakeSpiralCircles(self, SpiralPoints, Size, SketchPoints):
         circles = []
-        for i in range(len(SpiralPoints) - 1):
+        sketchCircles = []
+        for i in range(len(SketchPoints) - SketchParam2 - 1):
             # Make the vector
-            vector = rg.Vector3d(SpiralPoints[i + 1] - SpiralPoints[i])
+            vector = rg.Vector3d(SketchPoints[i + 1] - SketchPoints[i])
             # Make the plane
-            plane = rg.Plane((SpiralPoints[i + 1] + SpiralPoints[i]) / 2, vector)
+            plane = rg.Plane((SketchPoints[i + 1] + SketchPoints[i]) / 2, vector)
 
             # Rotate plane #!Hard part
             xAxis = copy(plane.XAxis)
@@ -92,9 +100,25 @@ class Nautilus(object):
 
             # Make circle
             circle = rg.Circle(plane, Size * (i + 1))
-            circles.append(
-                self.__RotateCircle(circle, (i / (len(SpiralPoints) - 1)) * CircleRotation)
-            )
+            if i < len(SpiralPoints) - 1:
+                circles.append(
+                    self.__Rotate(circle, (i / (len(SpiralPoints) - 1)) * CircleRotation)
+                )
+            else:
+                # * Sketch
+                if IsSketch:
+                    self.SketchLines2.append(circle)
+            if IsSketch:
+                if i < len(SketchPoints) - 1 - SketchParam3 and i %2 ==0:
+                    # print i
+                    # print (len(SketchPoints) - 1- SketchParam3)
+                    self.SketchLines3.append(  self.__Rotate(
+                        rg.Rectangle3d(
+                            plane,
+                            rg.Interval(-Size * (i + 1), Size * (i + 1)),
+                            rg.Interval(-Size * (i + 1), Size * (i + 1))),
+                        i / (len(SketchPoints) - 1)* CircleRotation))
+                    
 
         return circles
 
