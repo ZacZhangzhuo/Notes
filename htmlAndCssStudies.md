@@ -87,3 +87,11 @@
     /* only apply when hover. Pseudo Class */
   }
 ```
+
+## CSS structure
+* block element
+* in-line block element
+* in-line element
+* By default, a paragraph is a block element (Takes up the entire line)
+
+## Div = Division
