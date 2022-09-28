@@ -11,6 +11,7 @@ from ghpythonlib.components import ColourRGB
 # Sharpness
 # CircleSize
 # CircleRotation
+SketchLines1Extend = 100
 
 # CLASS
 class Nautilus(object):
@@ -22,9 +23,17 @@ class Nautilus(object):
         self.sharpness = Sharpness
         self.circle = CircleSize
         self.circleRotation = CircleRotation
+        self.Sketch = Sketch()
+        self.SketchLines1 = []
+        self.SketchLines2 = []
+        self.SketchLines3 = []
+        self.SketchLines4 = []
+        self.SketchLines5 = []
         self.circles = self.__MakeSpiralCircles(
             self.__MakeSpiralPoints(NautilusSize, PiceSize, PiceNumber, Sharpness), CircleSize
         )
+        self.objects = self.__makeObjects()
+        self.colours = self.__makeColours()
 
     def __FibonacciSharpness(PiceNumber, Sharpness):
         zSharpness = []
@@ -34,7 +43,7 @@ class Nautilus(object):
             zSharpness.append(zSharpness[i] + zSharpness[i + 1])
         return zSharpness
 
-    def __RotateCircle(self,circle, rotation):
+    def __RotateCircle(self, circle, rotation):
         # circle = rg.Circle(x)
         circle.Transform(
             rg.Transform.Rotation(
@@ -48,14 +57,21 @@ class Nautilus(object):
     def __MakeSpiralPoints(self, NautilusSize, PiceSize, PiceNumber, Sharpness):
         # Outcome point3d[]
         points = []
-        for t in range(PiceNumber):
+        sketchPoints = []
+
+        for t in range(PiceNumber + SketchLines1Extend):
             r = NautilusSize * t
             x = r * math.cos(2 * math.pi * t * PiceSize * 0.1)
             y = r * math.sin(2 * math.pi * t * PiceSize * 0.1)
             #  ys = FibonacciSharpness(PiceNumber, Sharpness)#! FibonacciSharpness
             #  points.append(rg.Point3d(x,y,ys[t]))#! FibonacciSharpness
             #  print ys
-            points.append(rg.Point3d(x, y, Sharpness * t * t))
+            if t < PiceNumber:
+                points.append(rg.Point3d(x, y, Sharpness * t * t))
+            sketchPoints.append(rg.Point3d(x, y, Sharpness * t * t))
+
+        # * Sketch
+        self.SketchLines1 = self.Sketch.PointsToCurve(sketchPoints)
 
         return points
 
@@ -76,11 +92,13 @@ class Nautilus(object):
 
             # Make circle
             circle = rg.Circle(plane, Size * (i + 1))
-            circles.append(self.__RotateCircle(circle, (i / (len(SpiralPoints) - 1)) * CircleRotation))
+            circles.append(
+                self.__RotateCircle(circle, (i / (len(SpiralPoints) - 1)) * CircleRotation)
+            )
 
         return circles
 
-    def colours(self):
+    def __makeColours(self):
         Colours = []
         for i in range(len(self.circles) - 1):
             colour = ColourRGB(
@@ -92,7 +110,7 @@ class Nautilus(object):
             Colours.append(colour)
         return Colours
 
-    def object(self):
+    def __makeObjects(self):
         Nautilus = []
         for i in range(len(self.circles) - 1):
             Nautilus.append(
@@ -103,7 +121,16 @@ class Nautilus(object):
         return Nautilus
 
 
+class Sketch(object):
+    def PointsToCurve(self, points):
+        return rg.NurbsCurve.Create(False, 2, points)
+
+
 nautilus = Nautilus(NautilusSize, PiceSize, PiceNumber, Sharpness, CircleSize, CircleRotation)
-Objects = nautilus.object()
-Colours = nautilus.colours()
+Objects = nautilus.objects
+Colours = nautilus.colours
 Circles = nautilus.circles
+SketchLines1 = nautilus.SketchLines1
+SketchLines2 = nautilus.SketchLines2
+SketchLines3 = nautilus.SketchLines3
+SketchLines4 = nautilus.SketchLines4
