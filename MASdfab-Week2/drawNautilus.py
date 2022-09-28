@@ -3,6 +3,7 @@ from copy import copy
 import Rhino.Geometry as rg
 import math
 from ghpythonlib.components import ColourRGB
+import sys
 
 # INPUTS
 # NautilusSize
@@ -109,16 +110,25 @@ class Nautilus(object):
                 if IsSketch:
                     self.SketchLines2.append(circle)
             if IsSketch:
-                if i < len(SketchPoints) - 1 - SketchParam3 and i %2 ==0:
+                if i < len(SketchPoints) - 1 - SketchParam3 and i % 2 == 0:
                     # print i
                     # print (len(SketchPoints) - 1- SketchParam3)
-                    self.SketchLines3.append(  self.__Rotate(
-                        rg.Rectangle3d(
-                            plane,
-                            rg.Interval(-Size * (i + 1), Size * (i + 1)),
-                            rg.Interval(-Size * (i + 1), Size * (i + 1))),
-                        i / (len(SketchPoints) - 1)* CircleRotation))
-                    
+                    # rg.ArcCurve()
+                    sketchCircles.append(
+                        self.__Rotate(
+                            rg.Rectangle3d(
+                                plane,
+                                rg.Interval(-Size * (i + 1), Size * (i + 1)),
+                                rg.Interval(-Size * (i + 1), Size * (i + 1)),
+                            ),
+                            i / (len(SketchPoints) - 1) * CircleRotation,
+                        ).ToPolyline()
+                    )
+
+        # * Sketch - extend rectangles
+        # for rectangles in sketchCircles:
+        line1 = rg.ArcCurve()
+        # line1.ClosestPoint()
 
         return circles
 
@@ -158,3 +168,6 @@ SketchLines1 = nautilus.SketchLines1
 SketchLines2 = nautilus.SketchLines2
 SketchLines3 = nautilus.SketchLines3
 SketchLines4 = nautilus.SketchLines4
+
+
+rg.Point3d()

@@ -83,3 +83,21 @@ Contents
 ```Python
     box_mesh.VertexColors.CreateMonotoneMesh(self.color)
 ```
+
+## One reason why AutoCompletion does not work on my PC
+
+* Some other paths occupied the AutoCompletion but cannot do that well. So we have to clear every extra path, and don't let the useless things exist.
+
+```Json
+      "python.autoComplete.extraPaths": [
+  
+    "C:\\Users\\Zac\\AppData\\Roaming\\McNeel\\Rhinoceros\\7.0\\Plug-ins\\IronPython (814d908a-e25c-493d-97e9-ee3861957f49)\\settings\\lib",
+    "C:\\Users\\Zac\\AppData\\Roaming\\McNeel\\Rhinoceros\\7.0\\scripts",
+    "C:\\Users\\Zac\\AppData\\Roaming\\McNeel\\Rhinoceros\\7.0\\Plug-ins\\IronPython (814d908a-e25c-493d-97e9-ee3861957f49)\\settings\\lib",
+    "C:\\Applications\\Rhino 7\\Plug-ins\\IronPython\\Lib",
+    "C:\\Users\\Zac\\AppData\\Roaming\\McNeel\\Rhinoceros\\7.0\\Plug-ins\\IronPython (814d908a-e25c-493d-97e9-ee3861957f49)\\settings\\lib",
+    // There is a "C:\Program Files\Common Files\McNeel\Rhinoceros\7.0\Plug-ins\CodeListener" very annoying and occupied the autoCompletion when scripting GHPython. Delete this one then autoCompletion is fine.
+    "C:\\Users\\Zac\\AppData\\Roaming\\McNeel\\Rhinoceros\\7.0\\Plug-ins\\IronPython (814d908a-e25c-493d-97e9-ee3861957f49)\\settings\\lib\\ghpythonlib"
+  ],
+```
+
