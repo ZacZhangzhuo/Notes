@@ -1,4 +1,4 @@
-# MAS dfab - Week 2
+# MAS dfab - Week 2 - Computational Art
 
 ---
 
