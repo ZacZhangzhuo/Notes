@@ -85,3 +85,29 @@
     Mesh = module_rhino.display_mesh(m)
 ```
 
+## Mola color
+```python
+    import mola
+
+    # m = mola.construct_icosahedron(Radius)
+    # Mesh = module_rhino.display_mesh(m)
+
+
+    torus = mola.construct_torus(Radius, Radius2)
+
+    mola.color_faces_by_curvature(torus.faces)
+    # mola.color_faces_by_compactness(torus.faces)
+    # mola.color_faces_by_area(torus.faces)
+
+    Mesh = mola.module_rhino.display_mesh(torus)
+
+    spheres = []
+    for v in torus.vertices:
+        radius = mola.math_map(v.z, -4, 4, 0.05, 0.5)
+        s = mola.construct_sphere(radius, v.x, v.y, v.z,9, 9)
+        temp = mola.module_rhino.display_mesh(s)
+        spheres.append(temp)
+        
+    Spheres = spheres
+
+```
