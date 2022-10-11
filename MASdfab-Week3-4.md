@@ -1,7 +1,5 @@
 # MAS dfab - Week 3-4 - Robotic Dancing, Robotic Drawing, Generative City
 
-
-
 ## L-System
 
 ```Python
@@ -40,9 +38,9 @@
             rad = math.radians(angle)
             next_vt = rg.Point3d(length*math.cos(rad) + vt.X, length*math.sin(rad) + vt.Y, 0)
             lines.append(rg.Line(vt, next_vt))
-            
+
             vt = next_vt
-            
+
         elif c == "[":
             # Save position
             vertices.append(vt)
@@ -51,9 +49,9 @@
             # Restore position
             vt = vertices.pop()
             angle = angles.pop()
-        
-        
-        
+
+
+
     L_system = lines
 ```
 
@@ -86,6 +84,7 @@
 ```
 
 ## Mola color
+
 ```python
     import mola
 
@@ -107,7 +106,13 @@
         s = mola.construct_sphere(radius, v.x, v.y, v.z,9, 9)
         temp = mola.module_rhino.display_mesh(s)
         spheres.append(temp)
-        
+
     Spheres = spheres
 
+```
+
+## Mola subdivision
+   *  https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface
+```Python
+    molaMesh = mola.subdivide_mesh_catmull(molaMesh)
 ```

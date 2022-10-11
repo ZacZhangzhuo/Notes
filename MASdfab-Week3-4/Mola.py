@@ -1,18 +1,21 @@
 import mola
+import math
+import Rhino.Geometry as rg
 
+molaMesh = mola.construct_sphere(radius=5, u_res=8, v_res=8)
 
-m = mola.construct_icosahedron(Radius)
+for v in molaMesh.vertices:
+    if v.z > 0:
+        v.z *= 1.8
 
-faces = []
-for face in m.faces:
-    face = mola.subdivide_face_split_grid(face, Temp, Temp)
-    faces.append(face)
+molaMesh = mola.subdivide_mesh_catmull(molaMesh)
 
-# m.faces = faces
-# mola.color_faces_by_vertical_angle(m.faces)
+for f in molaMesh.faces:
+    molaMesh.faces.extend(mola.subdivide_face_extrude_tapered(f, 10,0.5, True))
+    
+    
+Mesh = mola.module_rhino.display_mesh(molaMesh)
 
-Mesh = mola.module_rhino.display_mesh(m)
-# torus = mola.construct_torus(Radius, Radius2)
-
-
-# Mesh = mola.module_rhino.display_mesh(torus)
+# outTemp = []
+# for face in molaMesh.faces:
+    # outTemp.append(rg.Point3d(mola.face_center(face).x, mola.face_center(face).y, mola.face_center(face).z))
