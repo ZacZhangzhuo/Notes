@@ -68,6 +68,10 @@ for face in mMesh.faces:
 
     newMesh.faces.append(face)
 
+    # rg.Point3d(0, 0, 0)
+    # x = [1,1,1,1,]
+
+
 newMesh.update_topology()
 newMesh = mola.subdivide_mesh_catmull(newMesh)
 newMesh = mola.subdivide_mesh_catmull(newMesh)
