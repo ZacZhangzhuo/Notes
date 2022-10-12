@@ -46,7 +46,6 @@ mMesh = newMesh
 
 ########################################################################
 
-
 newMesh = mola.Mesh()
 for face in mMesh.faces:
     if face.group == "construction":
