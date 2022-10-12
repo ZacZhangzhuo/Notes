@@ -1,7 +1,6 @@
 import mola
 import random
 import Rhino.Geometry as rg
-from mola import module_rhino
 
 mMesh = mola.construct_single_face(
     [mola.Vertex(0, 0, 0), mola.Vertex(10, 0, 0), mola.Vertex(10, 10, 0), mola.Vertex(0, 10, 0)]
