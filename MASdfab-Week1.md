@@ -1,46 +1,47 @@
-
 # MAS dfab - Week 1 - Python Basics
 
 ---
 
 Contents:
+
 <!-- vscode-markdown-toc -->
-* 1. [Transformation](#Transformation)
-* 2. [Floor division operator](#Floordivisionoperator)
-* 3. [Add list to a list](#Addlisttoalist)
-* 4. [Tuple](#Tuple)
-* 5. [Dictionary](#Dictionary)
-* 6. [Enumeration](#Enumeration)
-* 7. [Zip](#Zip)
-* 8. [Multiple returns in definition](#Multiplereturnsindefinition)
-* 9. [Class](#Class)
-* 10. [Flag in the wind](#Flaginthewind)
-* 11. [Chinese flag](#Chineseflag)
-* 12. [Box class](#Boxclass)
-* 13. [Make a Nautilus](#MakeaNautilus)
+
+- 1. [Transformation](#Transformation)
+- 2. [Floor division operator](#Floordivisionoperator)
+- 3. [Add list to a list](#Addlisttoalist)
+- 4. [Tuple](#Tuple)
+- 5. [Dictionary](#Dictionary)
+- 6. [Enumeration](#Enumeration)
+- 7. [Zip](#Zip)
+- 8. [Multiple returns in definition](#Multiplereturnsindefinition)
+- 9. [Class](#Class)
+- 10. [Flag in the wind](#Flaginthewind)
+- 11. [Chinese flag](#Chineseflag)
+- 12. [Box class](#Boxclass)
+- 13. [Make a Nautilus](#MakeaNautilus)
 
 ---
 
-##  1. <a name='Transformation'></a>Transformation
+## 1. <a name='Transformation'></a>Transformation
 
 ```Python
 a = int(a)
 b = str(3.14)
 ```
 
-##  2. <a name='Floordivisionoperator'></a>Floor division operator
+## 2. <a name='Floordivisionoperator'></a>Floor division operator
 
 ```Python
 print (8//3) #answer is 2
 ```
 
-##  3. <a name='Addlisttoalist'></a>Add list to a list
+## 3. <a name='Addlisttoalist'></a>Add list to a list
 
 ```Python
 list1.extend(list2)
 ```
 
-##  4. <a name='Tuple'></a>Tuple
+## 4. <a name='Tuple'></a>Tuple
 
 Once created, cannot be changed
 
@@ -49,13 +50,13 @@ b = (element1, element2, ... , elementn)
 a = ("c.biancheng.net", 1, [2,'a'], ("abc",3.0))
 ```
 
-##  5. <a name='Dictionary'></a>Dictionary
+## 5. <a name='Dictionary'></a>Dictionary
 
 ```Python
 myDict = {"Name": "Zac", "Age": 23, "Gender": "Male"}
 ```
 
-##  6. <a name='Enumeration'></a>Enumeration
+## 6. <a name='Enumeration'></a>Enumeration
 
 ```Python
 for i, animals in enumeration(animals):
@@ -63,7 +64,7 @@ for i, animals in enumeration(animals):
     print (animals)
 ```
 
-##  7. <a name='Zip'></a>Zip
+## 7. <a name='Zip'></a>Zip
 
 ```Python
 for animal, number in zip(animals, numbers):
@@ -71,7 +72,7 @@ for animal, number in zip(animals, numbers):
     print number
 ```
 
-##  8. <a name='Multiplereturnsindefinition'></a>Multiple returns in definition
+## 8. <a name='Multiplereturnsindefinition'></a>Multiple returns in definition
 
 ```Python
 def function ( var1, var2):
@@ -81,7 +82,7 @@ a, b = function(var1, var2)
 # a = x, b=y
 ```
 
-##  9. <a name='Class'></a>Class
+## 9. <a name='Class'></a>Class
 
 ```Python
 class Message :
@@ -89,9 +90,9 @@ class Message :
 myMessage = Message
 ```
 
-##  10. <a name='Flaginthewind'></a>Flag in the wind
+## 10. <a name='Flaginthewind'></a>Flag in the wind
 
-![](/MASdfab-Week1/2022-09-22_15-14-01.gif)
+![](MASdfab-Week1/2022-09-22_15-14-01.gif)
 
 ```Python
     # This script is to generate a flag animation
@@ -150,11 +151,11 @@ myMessage = Message
     Cross = splitted[1]
 ```
 
-##  11. <a name='Chineseflag'></a>Chinese flag
+## 11. <a name='Chineseflag'></a>Chinese flag
 
-![](/MASdfab-Week1/2022-09-23-09-05-27.png)
+![](MASdfab-Week1/2022-09-23-09-05-27.png)
 
-![](/MASdfab-Week1/2022-09-23-09-08-41.png)
+![](MASdfab-Week1/2022-09-23-09-08-41.png)
 
 ```Python
    # Import
@@ -214,7 +215,7 @@ myMessage = Message
    RectangleSurface = rg.NurbsSurface.CreateFromCorners(rg.Point3d(0,0,0), rg.Point3d(flagLength,0,0), rg.Point3d(flagLength, flagWidth, 0), rg.Point3d(0,flagWidth,0))
 ```
 
-##  12. <a name='Boxclass'></a>Box class
+## 12. <a name='Boxclass'></a>Box class
 
 ```Python
     import Rhino.Geometry as rg
@@ -254,11 +255,11 @@ myMessage = Message
     Colours = colours
 ```
 
-##  13. <a name='MakeaNautilus'></a>Make a Nautilus
+## 13. <a name='MakeaNautilus'></a>Make a Nautilus
 
-![Nautilus.jpg](/MASdfab-Week1/Nautilus.jpg)
+![Nautilus.jpg](MASdfab-Week1/Nautilus.jpg)
 
-![](/MASdfab-Week1/Nautilus.png)
+![](MASdfab-Week1/Nautilus.png)
 
 ```Python
     # IMPORT

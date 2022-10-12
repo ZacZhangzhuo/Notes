@@ -1,5 +1,17 @@
 # MAS dfab - Week 3-4 - Robotic Dancing, Robotic Drawing, Generative City
 
+- [MAS dfab - Week 3-4 - Robotic Dancing, Robotic Drawing, Generative City](#mas-dfab---week-3-4---robotic-dancing-robotic-drawing-generative-city)
+  - [L-System](#l-system)
+  - [Mola face](#mola-face)
+  - [Mola color](#mola-color)
+  - [Mola subdivision](#mola-subdivision)
+  - [Mola extrude](#mola-extrude)
+  - [Mola offset](#mola-offset)
+  - [Mola exercise 1](#mola-exercise-1)
+  - [Mola exercise 2](#mola-exercise-2)
+  - [Mola group](#mola-group)
+  - [Mola exercise 3](#mola-exercise-3)
+
 ## L-System
 
 ```Python
@@ -132,6 +144,7 @@
 ```
 
 ## Mola exercise 1
+
 ```python
     import mola
     import math
@@ -179,7 +192,8 @@
 ```
 
 ## Mola exercise 2
-* ![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-14-31-58.png)
+
+- ![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-14-31-58.png)
 
 ```python
     import Rhino.Geometry as rg
@@ -207,17 +221,16 @@
     Mesh = mola.module_rhino.display_mesh(mMesh)
 ```
 
-
 ## Mola group
+
 ```python
     for face in mMesh.faces:
         face.group = "plot"
 ```
 
-
 ## Mola exercise 3
- * ![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-16-54-33.png)
 
+- ![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-16-54-33.png)
 
 ```python
     import mola
