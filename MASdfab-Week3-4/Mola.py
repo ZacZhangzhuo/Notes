@@ -1,6 +1,7 @@
 import mola
 import random
 import Rhino.Geometry as rg
+from mola import module_rhino
 
 mMesh = mola.construct_single_face(
     [mola.Vertex(0, 0, 0), mola.Vertex(10, 0, 0), mola.Vertex(10, 10, 0), mola.Vertex(0, 10, 0)]
@@ -66,7 +67,6 @@ for face in mMesh.faces:
                 newFace.group = "building"
                 newFace.color = (0, 0, 1)
             newMesh.faces.extend(buildingSurface)
-
 
     newMesh.faces.append(face)
 

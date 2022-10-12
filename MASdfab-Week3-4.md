@@ -1,6 +1,6 @@
- <!-- omit from toc -->
-
 # MAS dfab - Week 3-4 - Robotic Dancing, Robotic Drawing, Generative City
+
+---
 
 - [L-System](#l-system)
 - [Mola face](#mola-face)
@@ -12,6 +12,8 @@
 - [Mola exercise 2](#mola-exercise-2)
 - [Mola group](#mola-group)
 - [Mola exercise 3](#mola-exercise-3)
+
+---
 
 ## L-System
 
@@ -126,7 +128,7 @@
 
 ## Mola subdivision
 
-- https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface
+https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface
 
 ```Python
     molaMesh = mola.subdivide_mesh_catmull(molaMesh)
@@ -194,7 +196,7 @@
 
 ## Mola exercise 2
 
-- ![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-14-31-58.png)
+![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-14-31-58.png)
 
 ```python
     import Rhino.Geometry as rg
@@ -231,7 +233,7 @@
 
 ## Mola exercise 3
 
-- ![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-16-54-33.png)
+![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-16-54-33.png)
 
 ```python
     import mola
@@ -314,3 +316,4 @@
 
     Mesh = mola.module_rhino.display_mesh(mMesh)
 ```
+
