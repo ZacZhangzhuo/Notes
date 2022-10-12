@@ -1,6 +1,10 @@
 import mola
 import random
+import Rhino
+
+# import Rhino.Geometry as rg
 import Rhino.Geometry as rg
+import math
 
 mMesh = mola.construct_single_face(
     [mola.Vertex(0, 0, 0), mola.Vertex(10, 0, 0), mola.Vertex(10, 10, 0), mola.Vertex(0, 10, 0)]
@@ -23,7 +27,6 @@ for face in mMesh.faces:
 
 mMesh = newMesh
 
-
 for face in mMesh.faces:
     face.group = "plot"
 
@@ -40,7 +43,6 @@ for f in mMesh.faces:
         newMesh.faces.extend(new_faces)
     else:
         newMesh.faces.append(f)
-
 
 mMesh = newMesh
 
@@ -71,6 +73,7 @@ for face in mMesh.faces:
     # rg.Point3d(0, 0, 0)
     # x = [1,1,1,1,]
 
+    # x = rg.Point3d(0, 0)
 
 newMesh.update_topology()
 newMesh = mola.subdivide_mesh_catmull(newMesh)
