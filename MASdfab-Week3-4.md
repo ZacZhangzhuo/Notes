@@ -1,16 +1,17 @@
+ <!-- omit from toc -->
+
 # MAS dfab - Week 3-4 - Robotic Dancing, Robotic Drawing, Generative City
 
-- [MAS dfab - Week 3-4 - Robotic Dancing, Robotic Drawing, Generative City](#mas-dfab---week-3-4---robotic-dancing-robotic-drawing-generative-city)
-  - [L-System](#l-system)
-  - [Mola face](#mola-face)
-  - [Mola color](#mola-color)
-  - [Mola subdivision](#mola-subdivision)
-  - [Mola extrude](#mola-extrude)
-  - [Mola offset](#mola-offset)
-  - [Mola exercise 1](#mola-exercise-1)
-  - [Mola exercise 2](#mola-exercise-2)
-  - [Mola group](#mola-group)
-  - [Mola exercise 3](#mola-exercise-3)
+- [L-System](#l-system)
+- [Mola face](#mola-face)
+- [Mola color](#mola-color)
+- [Mola subdivision](#mola-subdivision)
+- [Mola extrude](#mola-extrude)
+- [Mola offset](#mola-offset)
+- [Mola exercise 1](#mola-exercise-1)
+- [Mola exercise 2](#mola-exercise-2)
+- [Mola group](#mola-group)
+- [Mola exercise 3](#mola-exercise-3)
 
 ## L-System
 
