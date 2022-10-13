@@ -1,8 +1,5 @@
 import mola
 import random
-import Rhino
-
-# import Rhino.Geometry as rg
 import Rhino.Geometry as rg
 import math
 
