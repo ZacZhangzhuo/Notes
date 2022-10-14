@@ -1,7 +1,7 @@
 import Rhino.Geometry as rg
 import math
 import Rhino
-import mola
+import molazzzz
 
 rule1_predecessor = "X"
 rule1_successor = "F+[[X]-X]-F[-FX]+X"
