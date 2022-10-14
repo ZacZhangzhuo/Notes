@@ -1,0 +1,961 @@
+<!DOCTYPE html><html><head>
+      <title>MASdfab-Week1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Zac\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html {
+  /* margin-left: 25%; */
+  /* margin-right: 25%; */
+  font-size: 16px;
+}
+
+body {
+  font-family: "source sans pro", Arial;
+  font-style: italic;
+  background-color: black;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  position: relative;
+  font-weight: bold;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 1em;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+  text-align: left;
+}
+
+hr {
+  background-color: white;
+  height: 1px;
+  border-style: none;
+}
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #0097a7;
+  background: none;
+  font-family: "source sans pro", Arial;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 0.8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #0a0a0a;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+  background: #0a0a0a;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #095b67;
+}
+
+.token.cdata {
+  color: #095b67;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #16c1d9;
+}
+
+.token.builtin{
+  color: #0097a7
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule {
+  color: #b3ebf2;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #b3ebf2;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0097a7;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #4dd0e1;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #80deea;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #b3ebf2;
+}
+
+.token.list {
+  color: #16c1d9;
+}
+
+.token.inserted {
+  background-color: #0a0a0a;
+  color: #095b67;
+}
+
+.token.deleted {
+  background-color: #0a0a0a;
+  color: #095b67;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+/* JSON */
+.language-json .token.property {
+  color: #16c1d9;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #16c1d9;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #16c1d9;
+}
+
+code.language-yaml {
+  color: #16c1d9;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #16c1d9;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #16c1d9;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #16c1d9;
+}
+
+.language-makefile .token.variable {
+  color: #16c1d9;
+}
+
+.language-makefile .token.builtin {
+  color: #16c1d9;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #16c1d9;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: #0a0a0a;
+  background: #0a0a0a;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before,
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: #0a0a0a;
+  color: #16c1d9;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px #16c1d9;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="mas-dfab-week-1-python-basics">MAS dfab - Week 1 - Python Basics</h1>
+
+<hr>
+<p>Contents:</p>
+<ul>
+<li>
+<ol>
+<li><a href="#Transformation">Transformation</a></li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><a href="#Floordivisionoperator">Floor division operator</a></li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><a href="#Addlisttoalist">Add list to a list</a></li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li><a href="#Tuple">Tuple</a></li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li><a href="#Dictionary">Dictionary</a></li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li><a href="#Enumeration">Enumeration</a></li>
+</ol>
+</li>
+<li>
+<ol start="7">
+<li><a href="#Zip">Zip</a></li>
+</ol>
+</li>
+<li>
+<ol start="8">
+<li><a href="#Multiplereturnsindefinition">Multiple returns in definition</a></li>
+</ol>
+</li>
+<li>
+<ol start="9">
+<li><a href="#Class">Class</a></li>
+</ol>
+</li>
+<li>
+<ol start="10">
+<li><a href="#Flaginthewind">Flag in the wind</a></li>
+</ol>
+</li>
+<li>
+<ol start="11">
+<li><a href="#Chineseflag">Chinese flag</a></li>
+</ol>
+</li>
+<li>
+<ol start="12">
+<li><a href="#Boxclass">Box class</a></li>
+</ol>
+</li>
+<li>
+<ol start="13">
+<li><a href="#MakeaNautilus">Make a Nautilus</a></li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 class="mume-header" id="1-a-nametransformationatransformation">1. <a name="Transformation" href></a>Transformation</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python">a <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+b <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="2-a-namefloordivisionoperatorafloor-division-operator">2. <a name="Floordivisionoperator" href></a>Floor division operator</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python"><span class="token keyword keyword-print">print</span> <span class="token punctuation">(</span><span class="token number">8</span><span class="token operator">//</span><span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment">#answer is 2</span>
+</pre><h2 class="mume-header" id="3-a-nameaddlisttoalistaadd-list-to-a-list">3. <a name="Addlisttoalist" href></a>Add list to a list</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python">list1<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>list2<span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="4-a-nametupleatuple">4. <a name="Tuple" href></a>Tuple</h2>
+
+<p>Once created, cannot be changed</p>
+<pre data-role="codeBlock" data-info="Python" class="language-python">b <span class="token operator">=</span> <span class="token punctuation">(</span>element1<span class="token punctuation">,</span> element2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">,</span> elementn<span class="token punctuation">)</span>
+a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">&quot;c.biancheng.net&quot;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">&quot;abc&quot;</span><span class="token punctuation">,</span><span class="token number">3.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="5-a-namedictionaryadictionary">5. <a name="Dictionary" href></a>Dictionary</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python">myDict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;Name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Zac&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Age&quot;</span><span class="token punctuation">:</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token string">&quot;Gender&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Male&quot;</span><span class="token punctuation">}</span>
+</pre><h2 class="mume-header" id="6-a-nameenumerationaenumeration">6. <a name="Enumeration" href></a>Enumeration</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python"><span class="token keyword keyword-for">for</span> i<span class="token punctuation">,</span> animals <span class="token keyword keyword-in">in</span> enumeration<span class="token punctuation">(</span>animals<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span> i
+    <span class="token keyword keyword-print">print</span> <span class="token punctuation">(</span>animals<span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="7-a-namezipazip">7. <a name="Zip" href></a>Zip</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python"><span class="token keyword keyword-for">for</span> animal<span class="token punctuation">,</span> number <span class="token keyword keyword-in">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>animals<span class="token punctuation">,</span> numbers<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span> animal
+    <span class="token keyword keyword-print">print</span> number
+</pre><h2 class="mume-header" id="8-a-namemultiplereturnsindefinitionamultiple-returns-in-definition">8. <a name="Multiplereturnsindefinition" href></a>Multiple returns in definition</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python"><span class="token keyword keyword-def">def</span> <span class="token function">function</span> <span class="token punctuation">(</span> var1<span class="token punctuation">,</span> var2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    doSomething<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> x<span class="token punctuation">,</span> y
+a<span class="token punctuation">,</span> b <span class="token operator">=</span> function<span class="token punctuation">(</span>var1<span class="token punctuation">,</span> var2<span class="token punctuation">)</span>
+<span class="token comment"># a = x, b=y</span>
+</pre><h2 class="mume-header" id="9-a-nameclassaclass">9. <a name="Class" href></a>Class</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python"><span class="token keyword keyword-class">class</span> <span class="token class-name">Message</span> <span class="token punctuation">:</span>
+    message <span class="token operator">=</span> <span class="token string">&quot;Hello World&quot;</span>
+myMessage <span class="token operator">=</span> Message
+</pre><h2 class="mume-header" id="10-a-nameflaginthewindaflag-in-the-wind">10. <a name="Flaginthewind" href></a>Flag in the wind</h2>
+
+<p><img src="MASdfab-Week1/2022-09-22_15-14-01.gif" alt></p>
+<pre data-role="codeBlock" data-info="Python" class="language-python">    <span class="token comment"># This script is to generate a flag animation</span>
+
+    <span class="token comment"># Import</span>
+    <span class="token keyword keyword-from">from</span> cgitb <span class="token keyword keyword-import">import</span> reset
+    <span class="token keyword keyword-import">import</span> scriptcontext <span class="token keyword keyword-as">as</span> sc
+    <span class="token keyword keyword-import">import</span> Rhino<span class="token punctuation">.</span>Geometry <span class="token keyword keyword-as">as</span> rg
+    <span class="token keyword keyword-import">import</span> copy
+    <span class="token keyword keyword-import">import</span> math
+    <span class="token keyword keyword-import">import</span> Rhino<span class="token punctuation">.</span>Geometry<span class="token punctuation">.</span>Brep <span class="token keyword keyword-as">as</span> rb
+
+    <span class="token comment"># Initial variables</span>
+    flagLength <span class="token operator">=</span> <span class="token number">500</span> <span class="token comment">#mm</span>
+    flagWidth <span class="token operator">=</span> <span class="token number">500</span> <span class="token comment">#mm</span>
+    subdivision <span class="token operator">=</span> <span class="token number">10</span> <span class="token comment">#Must be integer</span>
+    reset <span class="token operator">=</span> <span class="token boolean">False</span> <span class="token comment">#In case to initialize</span>
+
+    <span class="token comment"># Wave the flag</span>
+    <span class="token keyword keyword-def">def</span> <span class="token function">waveFlag</span> <span class="token punctuation">(</span>FlagLength<span class="token punctuation">,</span> FlagWidth<span class="token punctuation">,</span>Amplitude<span class="token punctuation">,</span> Subdivision<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-if">if</span> <span class="token string">&quot;wavingVariable&quot;</span> <span class="token keyword keyword-not">not</span> <span class="token keyword keyword-in">in</span> sc<span class="token punctuation">.</span>sticky <span class="token keyword keyword-or">or</span> reset<span class="token punctuation">:</span>
+            sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>subdivision<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span><span class="token punctuation">(</span>FlagLength<span class="token operator">/</span><span class="token punctuation">(</span>Subdivision<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span>i<span class="token punctuation">,</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>math<span class="token punctuation">.</span>pi <span class="token operator">*</span> Subdivision<span class="token operator">/</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> Amplitude<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+        <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                tempPointI <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword keyword-if">if</span>  i <span class="token operator">==</span> <span class="token builtin">len</span> <span class="token punctuation">(</span>sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+                    tempPoint0 <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                    sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span>tempPointI<span class="token punctuation">.</span>X<span class="token punctuation">,</span>tempPoint0<span class="token punctuation">.</span>Y<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">)</span>
+                <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+                    tempPointJ <span class="token operator">=</span>copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                    sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span>  <span class="token operator">=</span> rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span>tempPointI<span class="token punctuation">.</span>X<span class="token punctuation">,</span>tempPointJ<span class="token punctuation">.</span>Y<span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> sc<span class="token punctuation">.</span>sticky<span class="token punctuation">[</span><span class="token string">&quot;wavingVariable&quot;</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># Output flag</span>
+    flagPoints1 <span class="token operator">=</span>  waveFlag<span class="token punctuation">(</span> flagLength<span class="token punctuation">,</span> flagWidth<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> subdivision<span class="token punctuation">)</span>
+    flagLine1 <span class="token operator">=</span> rg<span class="token punctuation">.</span>NurbsCurve<span class="token punctuation">.</span>Create<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> flagPoints1<span class="token punctuation">)</span>
+    flagPoints2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> flagPoints1<span class="token punctuation">:</span>
+        flagPoint2 <span class="token operator">=</span> rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span>i<span class="token punctuation">.</span>X<span class="token punctuation">,</span> i<span class="token punctuation">.</span>Y<span class="token punctuation">,</span> flagWidth<span class="token punctuation">)</span>
+        flagPoints2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>flagPoint2<span class="token punctuation">)</span>
+    flagLine2 <span class="token operator">=</span>  rg<span class="token punctuation">.</span>NurbsCurve<span class="token punctuation">.</span>Create<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> flagPoints2<span class="token punctuation">)</span>
+
+    Flag <span class="token operator">=</span> rg<span class="token punctuation">.</span>NurbsSurface<span class="token punctuation">.</span>CreateRuledSurface<span class="token punctuation">(</span>flagLine1<span class="token punctuation">,</span>flagLine2 <span class="token punctuation">)</span>
+
+    <span class="token comment"># Make a cross on the flag</span>
+    Patterns<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Patterns<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    line <span class="token operator">=</span> rg<span class="token punctuation">.</span>PolylineCurve<span class="token punctuation">(</span>Patterns<span class="token punctuation">)</span> <span class="token comment">#Cross line</span>
+    surface <span class="token operator">=</span> rg<span class="token punctuation">.</span>Surface<span class="token punctuation">.</span>CreateExtrusion<span class="token punctuation">(</span>line<span class="token punctuation">,</span> rg<span class="token punctuation">.</span>Vector3d<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">300</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    b1 <span class="token operator">=</span> rb<span class="token punctuation">.</span>CreateFromSurface<span class="token punctuation">(</span>surface<span class="token punctuation">)</span>
+    b2 <span class="token operator">=</span> rb<span class="token punctuation">.</span>CreateFromSurface<span class="token punctuation">(</span>Flag<span class="token punctuation">)</span>
+    splitted <span class="token operator">=</span> rb<span class="token punctuation">.</span>Split<span class="token punctuation">(</span>b2<span class="token punctuation">,</span> b1<span class="token punctuation">,</span> <span class="token number">0.01</span><span class="token punctuation">)</span>
+
+    Flag <span class="token operator">=</span> splitted<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    Cross <span class="token operator">=</span> splitted<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+</pre><h2 class="mume-header" id="11-a-namechineseflagachinese-flag">11. <a name="Chineseflag" href></a>Chinese flag</h2>
+
+<p><img src="MASdfab-Week1/2022-09-23-09-05-27.png" alt></p>
+<p><img src="MASdfab-Week1/2022-09-23-09-08-41.png" alt></p>
+<pre data-role="codeBlock" data-info="Python" class="language-python">   <span class="token comment"># Import</span>
+   <span class="token keyword keyword-from">from</span> cgitb <span class="token keyword keyword-import">import</span> reset
+   <span class="token keyword keyword-import">import</span> scriptcontext <span class="token keyword keyword-as">as</span> sc
+   <span class="token keyword keyword-import">import</span> Rhino<span class="token punctuation">.</span>Geometry <span class="token keyword keyword-as">as</span> rg
+   <span class="token keyword keyword-import">import</span> copy
+   <span class="token keyword keyword-import">import</span> math
+   <span class="token keyword keyword-import">import</span> Rhino<span class="token punctuation">.</span>Geometry<span class="token punctuation">.</span>Brep <span class="token keyword keyword-as">as</span> rb
+
+   <span class="token comment">#Def</span>
+   <span class="token keyword keyword-class">class</span> <span class="token class-name">Star</span><span class="token punctuation">:</span>
+       <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>xpos<span class="token punctuation">,</span>ypos<span class="token punctuation">,</span>rad<span class="token punctuation">,</span>peaks<span class="token punctuation">,</span>f<span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+           self<span class="token punctuation">.</span>xpos <span class="token operator">=</span> xpos
+           self<span class="token punctuation">.</span>ypos <span class="token operator">=</span> ypos
+           self<span class="token punctuation">.</span>rad <span class="token operator">=</span> rad
+           self<span class="token punctuation">.</span>peaks <span class="token operator">=</span> peaks
+           self<span class="token punctuation">.</span>factor <span class="token operator">=</span> f
+
+       <span class="token keyword keyword-def">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+           pts_star <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+           res <span class="token operator">=</span> self<span class="token punctuation">.</span>peaks <span class="token operator">*</span> <span class="token number">2</span>
+           theta <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> math<span class="token punctuation">.</span>pi <span class="token operator">/</span> res
+
+           <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">:</span>
+               <span class="token keyword keyword-if">if</span> i<span class="token operator">%</span><span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                   radius <span class="token operator">=</span> self<span class="token punctuation">.</span>rad <span class="token operator">*</span> self<span class="token punctuation">.</span>factor
+               <span class="token keyword keyword-else">else</span><span class="token punctuation">:</span>
+                   radius <span class="token operator">=</span> self<span class="token punctuation">.</span>rad
+               xc <span class="token operator">=</span> self<span class="token punctuation">.</span>xpos <span class="token operator">+</span> math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>theta<span class="token operator">*</span>i<span class="token operator">-</span>theta<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> radius
+               yc <span class="token operator">=</span> self<span class="token punctuation">.</span>ypos <span class="token operator">+</span> math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>theta<span class="token operator">*</span>i<span class="token operator">-</span>theta<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> radius
+               pts_star<span class="token punctuation">.</span>append<span class="token punctuation">(</span>rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span>xc<span class="token punctuation">,</span>yc<span class="token punctuation">,</span><span class="token number">0.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+           curve_star <span class="token operator">=</span> rg<span class="token punctuation">.</span>NurbsCurve<span class="token punctuation">.</span>Create<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>pts_star<span class="token punctuation">)</span>
+           star <span class="token operator">=</span> rg<span class="token punctuation">.</span>Brep<span class="token punctuation">.</span>CreatePlanarBreps<span class="token punctuation">(</span>curve_star<span class="token punctuation">,</span><span class="token number">0.001</span><span class="token punctuation">)</span>
+           <span class="token keyword keyword-return">return</span> star
+
+   <span class="token comment"># Initial variables</span>
+   flagLength <span class="token operator">=</span> <span class="token number">2880</span> <span class="token comment">#mm</span>
+   flagWidth <span class="token operator">=</span> <span class="token number">1920</span> <span class="token comment">#mm</span>
+
+   <span class="token comment"># Draw stars</span>
+   star1 <span class="token operator">=</span> Star<span class="token punctuation">(</span>Patterns<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>X<span class="token punctuation">,</span>Patterns<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>Y<span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0.4</span><span class="token punctuation">)</span>
+   star2 <span class="token operator">=</span> Star<span class="token punctuation">(</span>Patterns<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>X<span class="token punctuation">,</span>Patterns<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>Y<span class="token punctuation">,</span><span class="token number">70</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0.4</span><span class="token punctuation">)</span>
+   star3 <span class="token operator">=</span> Star<span class="token punctuation">(</span>Patterns<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>X<span class="token punctuation">,</span>Patterns<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>Y<span class="token punctuation">,</span><span class="token number">70</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0.4</span><span class="token punctuation">)</span>
+   star4 <span class="token operator">=</span> Star<span class="token punctuation">(</span>Patterns<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span>X<span class="token punctuation">,</span>Patterns<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span>Y<span class="token punctuation">,</span><span class="token number">70</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0.4</span><span class="token punctuation">)</span>
+   star5 <span class="token operator">=</span> Star<span class="token punctuation">(</span>Patterns<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span>X<span class="token punctuation">,</span>Patterns<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span>Y<span class="token punctuation">,</span><span class="token number">70</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">0.4</span><span class="token punctuation">)</span>
+   Stars <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+   Stars<span class="token operator">=</span>star1<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+   Stars <span class="token operator">+=</span> star2<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+   Stars<span class="token operator">+=</span> star2<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+   Stars<span class="token operator">+=</span>star3<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+   Stars<span class="token operator">+=</span>star4<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+   Stars<span class="token operator">+=</span>star5<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+   <span class="token comment"># Draw background</span>
+   RectangleSurface <span class="token operator">=</span> rg<span class="token punctuation">.</span>NurbsSurface<span class="token punctuation">.</span>CreateFromCorners<span class="token punctuation">(</span>rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span>flagLength<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span>flagLength<span class="token punctuation">,</span> flagWidth<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>flagWidth<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><h2 class="mume-header" id="12-a-nameboxclassabox-class">12. <a name="Boxclass" href></a>Box class</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python">    <span class="token keyword keyword-import">import</span> Rhino<span class="token punctuation">.</span>Geometry <span class="token keyword keyword-as">as</span> rg
+    <span class="token keyword keyword-from">from</span> ghpythonlib<span class="token punctuation">.</span>components <span class="token keyword keyword-import">import</span> ColourRGB
+
+    <span class="token keyword keyword-class">class</span> <span class="token class-name">Rectangle</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        <span class="token comment"># Initialize my object</span>
+        <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z<span class="token punctuation">,</span>w<span class="token punctuation">,</span>d<span class="token punctuation">,</span>h<span class="token punctuation">,</span> v <span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>x <span class="token operator">=</span> x
+            self<span class="token punctuation">.</span>y <span class="token operator">=</span> y
+            self<span class="token punctuation">.</span>z                           <span class="token operator">=</span> z
+            self<span class="token punctuation">.</span>vector <span class="token operator">=</span> rg<span class="token punctuation">.</span>Vector3d<span class="token punctuation">(</span>v<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> v<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> v<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>center <span class="token operator">=</span> rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>plane <span class="token operator">=</span> rg<span class="token punctuation">.</span>Plane<span class="token punctuation">(</span>rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> rg<span class="token punctuation">.</span>Vector3d<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>w <span class="token operator">=</span> w
+            self<span class="token punctuation">.</span>d <span class="token operator">=</span>d
+            self<span class="token punctuation">.</span>h <span class="token operator">=</span>h
+            self<span class="token punctuation">.</span>volume <span class="token operator">=</span> w <span class="token operator">*</span> d<span class="token operator">*</span> h
+            self<span class="token punctuation">.</span>rect <span class="token operator">=</span> <span class="token boolean">None</span>
+            self<span class="token punctuation">.</span>colour    <span class="token operator">=</span> ColourRGB<span class="token punctuation">(</span>c<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-def">def</span> <span class="token function">draw</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>rect <span class="token operator">=</span> rg<span class="token punctuation">.</span>Box<span class="token punctuation">(</span>self<span class="token punctuation">.</span>plane<span class="token punctuation">,</span> rg<span class="token punctuation">.</span>Interval<span class="token punctuation">(</span><span class="token operator">-</span>self<span class="token punctuation">.</span>w<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>w<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                                rg<span class="token punctuation">.</span>Interval<span class="token punctuation">(</span><span class="token operator">-</span>self<span class="token punctuation">.</span>d<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>d<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                                rg<span class="token punctuation">.</span>Interval<span class="token punctuation">(</span><span class="token operator">-</span>self<span class="token punctuation">.</span>h<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>h<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    objects <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    colours <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    totalVolume <span class="token operator">=</span> <span class="token number">0</span>
+
+    r <span class="token operator">=</span> Rectangle<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span>
+    r<span class="token punctuation">.</span>draw<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    objects<span class="token punctuation">.</span>append<span class="token punctuation">(</span>r<span class="token punctuation">.</span>rect<span class="token punctuation">)</span>
+    colours<span class="token punctuation">.</span>append<span class="token punctuation">(</span>r<span class="token punctuation">.</span>colour<span class="token punctuation">)</span>
+
+    Objects <span class="token operator">=</span> objects
+    Colours <span class="token operator">=</span> colours
+</pre><h2 class="mume-header" id="13-a-namemakeanautilusamake-a-nautilus">13. <a name="MakeaNautilus" href></a>Make a Nautilus</h2>
+
+<p><img src="MASdfab-Week1/Nautilus.jpg" alt="Nautilus.jpg"></p>
+<p><img src="MASdfab-Week1/Nautilus.png" alt></p>
+<pre data-role="codeBlock" data-info="Python" class="language-python">    <span class="token comment"># IMPORT</span>
+    <span class="token keyword keyword-from">from</span> copy <span class="token keyword keyword-import">import</span> copy
+    <span class="token keyword keyword-import">import</span> Rhino<span class="token punctuation">.</span>Geometry <span class="token keyword keyword-as">as</span> rg
+    <span class="token keyword keyword-import">import</span> math
+    <span class="token keyword keyword-from">from</span> ghpythonlib<span class="token punctuation">.</span>components <span class="token keyword keyword-import">import</span> ColourRGB
+
+    <span class="token comment"># INPUTS</span>
+    <span class="token comment"># NautilusSize</span>
+    <span class="token comment"># PiceSize</span>
+    <span class="token comment"># PiceNumber</span>
+    <span class="token comment"># Sharpness</span>
+    <span class="token comment"># CircleSize</span>
+    <span class="token comment"># CircleRotation</span>
+
+    <span class="token comment"># CLASS</span>
+    <span class="token keyword keyword-class">class</span> <span class="token class-name">Nautilus</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># initialize</span>
+        <span class="token keyword keyword-def">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> NautilusSize<span class="token punctuation">,</span> PiceSize<span class="token punctuation">,</span> PiceNumber<span class="token punctuation">,</span> Sharpness<span class="token punctuation">,</span> CircleSize<span class="token punctuation">,</span> CircleRotation<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>nautilusSize <span class="token operator">=</span> NautilusSize
+            self<span class="token punctuation">.</span>piceSize <span class="token operator">=</span> PiceSize
+            self<span class="token punctuation">.</span>piceNumber <span class="token operator">=</span> PiceNumber
+            self<span class="token punctuation">.</span>sharpness <span class="token operator">=</span> Sharpness
+            self<span class="token punctuation">.</span>circle <span class="token operator">=</span> CircleSize
+            self<span class="token punctuation">.</span>circleRotation <span class="token operator">=</span> CircleRotation
+            self<span class="token punctuation">.</span>circles <span class="token operator">=</span> self<span class="token punctuation">.</span>__MakeSpiralCircles<span class="token punctuation">(</span>
+                self<span class="token punctuation">.</span>__MakeSpiralPoints<span class="token punctuation">(</span>NautilusSize<span class="token punctuation">,</span> PiceSize<span class="token punctuation">,</span> PiceNumber<span class="token punctuation">,</span> Sharpness<span class="token punctuation">)</span><span class="token punctuation">,</span> CircleSize
+            <span class="token punctuation">)</span>
+
+        <span class="token keyword keyword-def">def</span> <span class="token function">__FibonacciSharpness</span><span class="token punctuation">(</span>PiceNumber<span class="token punctuation">,</span> Sharpness<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            zSharpness <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            zSharpness<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Sharpness<span class="token punctuation">)</span>
+            zSharpness<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Sharpness<span class="token punctuation">)</span>
+            <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>PiceNumber <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                zSharpness<span class="token punctuation">.</span>append<span class="token punctuation">(</span>zSharpness<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> zSharpness<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword keyword-return">return</span> zSharpness
+
+        <span class="token keyword keyword-def">def</span> <span class="token function">__RotateCircle</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>circle<span class="token punctuation">,</span> rotation<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># circle = rg.Circle(x)</span>
+            circle<span class="token punctuation">.</span>Transform<span class="token punctuation">(</span>
+                rg<span class="token punctuation">.</span>Transform<span class="token punctuation">.</span>Rotation<span class="token punctuation">(</span>
+                    rg<span class="token punctuation">.</span>Vector3d<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    rg<span class="token punctuation">.</span>Vector3d<span class="token punctuation">(</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>rotation<span class="token punctuation">)</span><span class="token punctuation">,</span> math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>rotation<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    circle<span class="token punctuation">.</span>Center<span class="token punctuation">,</span>
+                <span class="token punctuation">)</span>
+            <span class="token punctuation">)</span>
+            <span class="token keyword keyword-return">return</span> circle
+
+        <span class="token keyword keyword-def">def</span> <span class="token function">__MakeSpiralPoints</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> NautilusSize<span class="token punctuation">,</span> PiceSize<span class="token punctuation">,</span> PiceNumber<span class="token punctuation">,</span> Sharpness<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># Outcome point3d[]</span>
+            points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword keyword-for">for</span> t <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>PiceNumber<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                r <span class="token operator">=</span> NautilusSize <span class="token operator">*</span> t
+                x <span class="token operator">=</span> r <span class="token operator">*</span> math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> math<span class="token punctuation">.</span>pi <span class="token operator">*</span> t <span class="token operator">*</span> PiceSize <span class="token operator">*</span> <span class="token number">0.1</span><span class="token punctuation">)</span>
+                y <span class="token operator">=</span> r <span class="token operator">*</span> math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> math<span class="token punctuation">.</span>pi <span class="token operator">*</span> t <span class="token operator">*</span> PiceSize <span class="token operator">*</span> <span class="token number">0.1</span><span class="token punctuation">)</span>
+                <span class="token comment">#  ys = FibonacciSharpness(PiceNumber, Sharpness)#! FibonacciSharpness</span>
+                <span class="token comment">#  points.append(rg.Point3d(x,y,ys[t]))#! FibonacciSharpness</span>
+                <span class="token comment">#  print ys</span>
+                points<span class="token punctuation">.</span>append<span class="token punctuation">(</span>rg<span class="token punctuation">.</span>Point3d<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> Sharpness <span class="token operator">*</span> t <span class="token operator">*</span> t<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+            <span class="token keyword keyword-return">return</span> points
+
+        <span class="token keyword keyword-def">def</span> <span class="token function">__MakeSpiralCircles</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> SpiralPoints<span class="token punctuation">,</span> Size<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            circles <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>SpiralPoints<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token comment"># Make the vector</span>
+                vector <span class="token operator">=</span> rg<span class="token punctuation">.</span>Vector3d<span class="token punctuation">(</span>SpiralPoints<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> SpiralPoints<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token comment"># Make the plane</span>
+                plane <span class="token operator">=</span> rg<span class="token punctuation">.</span>Plane<span class="token punctuation">(</span><span class="token punctuation">(</span>SpiralPoints<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> SpiralPoints<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> vector<span class="token punctuation">)</span>
+
+                <span class="token comment"># Rotate plane #!Hard part</span>
+                xAxis <span class="token operator">=</span> copy<span class="token punctuation">(</span>plane<span class="token punctuation">.</span>XAxis<span class="token punctuation">)</span>
+                xAxis<span class="token punctuation">.</span>Transform<span class="token punctuation">(</span>rg<span class="token punctuation">.</span>Transform<span class="token punctuation">.</span>ProjectAlong<span class="token punctuation">(</span>rg<span class="token punctuation">.</span>Plane<span class="token punctuation">.</span>WorldXY<span class="token punctuation">,</span> plane<span class="token punctuation">.</span>YAxis<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                plane<span class="token punctuation">.</span>Transform<span class="token punctuation">(</span>rg<span class="token punctuation">.</span>Transform<span class="token punctuation">.</span>Rotation<span class="token punctuation">(</span>plane<span class="token punctuation">.</span>XAxis<span class="token punctuation">,</span> xAxis<span class="token punctuation">,</span> plane<span class="token punctuation">.</span>Origin<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword keyword-if">if</span> plane<span class="token punctuation">.</span>YAxis<span class="token punctuation">.</span>Z <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                    plane <span class="token operator">=</span> rg<span class="token punctuation">.</span>Plane<span class="token punctuation">(</span>plane<span class="token punctuation">.</span>Origin<span class="token punctuation">,</span> <span class="token operator">-</span>plane<span class="token punctuation">.</span>XAxis<span class="token punctuation">,</span> <span class="token operator">-</span>plane<span class="token punctuation">.</span>YAxis<span class="token punctuation">)</span>
+
+                <span class="token comment"># Make circle</span>
+                circle <span class="token operator">=</span> rg<span class="token punctuation">.</span>Circle<span class="token punctuation">(</span>plane<span class="token punctuation">,</span> Size <span class="token operator">*</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                circles<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>__RotateCircle<span class="token punctuation">(</span>circle<span class="token punctuation">,</span> <span class="token punctuation">(</span>i <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>SpiralPoints<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> CircleRotation<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+            <span class="token keyword keyword-return">return</span> circles
+
+        <span class="token keyword keyword-def">def</span> <span class="token function">colours</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            Colours <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>circles<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                colour <span class="token operator">=</span> ColourRGB<span class="token punctuation">(</span>
+                    <span class="token number">255</span><span class="token punctuation">,</span>
+                    i <span class="token operator">*</span> <span class="token number">255</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>circles<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    i <span class="token operator">*</span> <span class="token number">255</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>circles<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                    i <span class="token operator">*</span> <span class="token number">255</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>circles<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">)</span>
+                Colours<span class="token punctuation">.</span>append<span class="token punctuation">(</span>colour<span class="token punctuation">)</span>
+            <span class="token keyword keyword-return">return</span> Colours
+
+        <span class="token keyword keyword-def">def</span> <span class="token function">object</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            Nautilus <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>circles<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                Nautilus<span class="token punctuation">.</span>append<span class="token punctuation">(</span>
+                    rg<span class="token punctuation">.</span>NurbsSurface<span class="token punctuation">.</span>CreateRuledSurface<span class="token punctuation">(</span>
+                        self<span class="token punctuation">.</span>circles<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>ToNurbsCurve<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>circles<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>ToNurbsCurve<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">)</span>
+                <span class="token punctuation">)</span>
+            <span class="token keyword keyword-return">return</span> Nautilus
+
+
+    nautilus <span class="token operator">=</span> Nautilus<span class="token punctuation">(</span>NautilusSize<span class="token punctuation">,</span> PiceSize<span class="token punctuation">,</span> PiceNumber<span class="token punctuation">,</span> Sharpness<span class="token punctuation">,</span> CircleSize<span class="token punctuation">,</span> CircleRotation<span class="token punctuation">)</span>
+    Objects <span class="token operator">=</span> nautilus<span class="token punctuation">.</span><span class="token builtin">object</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    Colours <span class="token operator">=</span> nautilus<span class="token punctuation">.</span>colours<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    Circles <span class="token operator">=</span> nautilus<span class="token punctuation">.</span>circles
+
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
