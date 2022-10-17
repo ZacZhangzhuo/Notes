@@ -2,11 +2,9 @@ import math
 import Rhino.Geometry as rg
 import zorse
 
-DIM = 128
+DIM = 2
 scale = 100
 mandelbrot = []
-maxIteration = 10
-n = 8
 
 
 class Spherical(object):
@@ -34,7 +32,8 @@ for i in range(DIM):
 
             zeta = zorse.zVector(0, 0, 0)
             iteration = 0
-
+            maxIteration = 10
+            n = 8
             while True:
 
                 sphericalZ = spherical(zeta.X, zeta.Y, zeta.Z)
@@ -43,30 +42,34 @@ for i in range(DIM):
                     * math.sin(sphericalZ.theta * n)
                     * math.cos(sphericalZ.phi * n)
                 )
+
                 newy = (
                     math.pow(sphericalZ.r, n)
                     * math.sin(sphericalZ.theta * n)
                     * math.sin(sphericalZ.phi * n)
                 )
+                
                 newz = math.pow(sphericalZ.r, n) * math.cos(sphericalZ.theta * n)
-
                 zeta.X = newx + x
                 zeta.Y = newy + y
                 zeta.Z = newz + z
 
                 iteration = iteration + 1
 
-                if sphericalZ.r > 16:
-                    print("x")
+                if (sphericalZ.r) > 16:
+                    # print("x")
                     if edge:
                         edge = False
+                    # print (str(i)+'x'+str(j)+'x'+str(k))
                     break
-
+                # print(iteration > maxIteration)
                 if iteration > maxIteration:
+
                     if ~edge:
                         edge = True
                         # print ('x')
                         mandelbrot.append(zorse.zVector(scale * x, scale * y, scale * z))
+                    # print(sphericalZ.r)
                     break
 
 pts = []
@@ -75,3 +78,6 @@ for vec in mandelbrot:
     # print(vec)
 
 outTemp = pts
+
+
+

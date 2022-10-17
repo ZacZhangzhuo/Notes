@@ -7,6 +7,7 @@ Content
 - [Axolotl Addition](#axolotl-addition)
 - [Axolotl Blend](#axolotl-blend)
 - [Axolotl Practice](#axolotl-practice)
+- [An interesting note](#an-interesting-note)
 
 --------
 
@@ -28,3 +29,23 @@ Content
 
 ![](MASdfab-Week5/final.png)
 ![](MASdfab-Week5/MASdfab-Week5_2022-10-17-14-19-23.png)
+
+## An interesting note
+
+```Python
+    import math
+    print(math.sin(-18.849556))
+    # Python: The outcome is -7.846124032502473e-08
+```
+
+```Csharp
+    A = Math.Sin(-18.849556);
+    // Csharp: The outcome is -7.8461e-8
+```
+
+```java
+    println(sin(-18.849556));
+    // Java: The outcome is -4.7699523E-8
+```
+
+
