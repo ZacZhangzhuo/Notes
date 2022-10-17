@@ -323,4 +323,3 @@ https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface
 City density
 Monuments 
 Typologies
-
