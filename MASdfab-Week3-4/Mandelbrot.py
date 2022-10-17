@@ -1,26 +1,12 @@
 import math
 import Rhino.Geometry as rg
-import mola
+import zorse
 
-DIM = 16
+DIM = 128
 scale = 100
 mandelbrot = []
 maxIteration = 10
 n = 8
-
-
-class zVector:
-    """A vector object constructed by X, Y and Z"""
-
-    def __init__(self, x, y, z):
-        self.X = x
-        self.Y = y
-        self.Z = z
-
-
-def Remap(number, min0, max0, min1, max1):
-    """Map a number from domain (min0, max0) into (min1, max1)"""
-    return (number - min0) / (max0 - min0) * (max1 - min1) + min1
 
 
 class Spherical(object):
@@ -42,11 +28,11 @@ for i in range(DIM):
         edge = False
         for k in range(DIM):
 
-            x = Remap(i, 0, DIM, -1, 1)
-            y = Remap(j, 0, DIM, -1, 1)
-            z = Remap(k, 0, DIM, -1, 1)
+            x = zorse.Remap(i, 0, DIM, -1, 1)
+            y = zorse.Remap(j, 0, DIM, -1, 1)
+            z = zorse.Remap(k, 0, DIM, -1, 1)
 
-            zeta = zVector(0, 0, 0)
+            zeta = zorse.zVector(0, 0, 0)
             iteration = 0
 
             while True:
@@ -71,19 +57,21 @@ for i in range(DIM):
                 iteration = iteration + 1
 
                 if sphericalZ.r > 16:
+                    print("x")
                     if edge:
                         edge = False
                     break
-                
-                
+
                 if iteration > maxIteration:
                     if ~edge:
                         edge = True
-                        mandelbrot.append(zVector(100 * x, 100 * y, 100 * z))
+                        # print ('x')
+                        mandelbrot.append(zorse.zVector(scale * x, scale * y, scale * z))
                     break
 
 pts = []
 for vec in mandelbrot:
     pts.append(rg.Point3d(vec.X, vec.Y, vec.Z))
+    # print(vec)
 
 outTemp = pts

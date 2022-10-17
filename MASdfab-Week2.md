@@ -3,21 +3,15 @@
 ---
 
 Contents
-<!-- vscode-markdown-toc -->
-* 1. [Enumeration](#Enumeration)
-* 2. [Interval](#Interval)
-* 3. [Read images](#Readimages)
-* 4. [Remap function](#Remapfunction)
-* 5. [Ask the colour of the pixie](#Askthecolourofthepixie)
-* 6. [Mesh Colour (Colour is stored in the vertex data)](#MeshColourColourisstoredinthevertexdata)
+- [Enumeration](#enumeration)
+- [Interval](#interval)
+- [Read images](#read-images)
+- [Remap function](#remap-function)
+- [Ask the colour of the pixie](#ask-the-colour-of-the-pixie)
+- [Mesh Colour (Colour is stored in the vertex data)](#mesh-colour-colour-is-stored-in-the-vertex-data)
+- [One reason why AutoCompletion does not work on my PC](#one-reason-why-autocompletion-does-not-work-on-my-pc)
 
-<!-- vscode-markdown-toc-config
-	numbering=false
-	autoSave=true
-	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc -->
-
-##  1. <a name='Enumeration'></a>Enumeration
+##  Enumeration
 
 ```Python
     for i, rectangle in enumerate(geo): #!
@@ -31,12 +25,12 @@ Contents
         degree = math.radians(random.randint(-rectangle, Corner(2).Y))
 ```
 
-##  2. <a name='Interval'></a>Interval
+##  Interval
 
 - Represents an interval in one-dimensional space, that is defined as two extrema or bounds.
 - https://developer.rhino3d.com/api/RhinoCommon/html/T_Rhino_Geometry_Interval.htm
 
-##  3. <a name='Readimages'></a>Read images
+##  Read images
 
 ```Python
     import System
@@ -53,7 +47,7 @@ Contents
     color = System.Drawing.Bitmap.GetPixel(bitmap, x, y)
 ```
 
-##  4. <a name='Remapfunction'></a>Remap function
+##  Remap function
 
 ```Python
     def remap(value, low1, high1, low2, high2):
@@ -61,7 +55,7 @@ Contents
         return new_value
 ```
 
-##  5. <a name='Askthecolourofthepixie'></a>Ask the colour of the pixie
+##  Ask the colour of the pixie
 
 ```Python
     import System
@@ -78,7 +72,7 @@ Contents
     color = System.Drawing.Bitmap.GetPixel(bitmap, x, y)
 ```
 
-##  6. <a name='MeshColourColourisstoredinthevertexdata'></a>Mesh Colour (Colour is stored in the vertex data)
+##  Mesh Colour (Colour is stored in the vertex data)
 
 ```Python
     box_mesh.VertexColors.CreateMonotoneMesh(self.color)

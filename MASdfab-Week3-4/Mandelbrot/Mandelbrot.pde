@@ -1,7 +1,7 @@
 import peasy.*;
 int DIM = 128;
 PeasyCam cam;
-PrintWriter output;
+// PrintWriter output;
 
 ArrayList<PVector> mandelbrot = new ArrayList<PVector>();
 class Spheriacal{
@@ -25,7 +25,7 @@ void setup() {
     size(600, 600, P3D);
     // windowMove(1200, 100);
     cam = new PeasyCam(this, 500);
-    output = createWriter("positions.txt");
+    // output = createWriter("positions.txt");
         
         // Ball
         for (int i = 0; i < DIM; i++) {
@@ -70,6 +70,7 @@ void setup() {
                         }
                         
                         // println(spheriacalZ.r);
+                        
                         break;
                     }
                     
@@ -88,14 +89,14 @@ void draw() {
     for (PVector v : mandelbrot) {
         point(v.x, v.y, v.z);
         stroke(255);
-        output.println("{" + v.x + "," + v.y + "," + v.z + "}");
+        // output.println("{" + v.x + "," + v.y + "," + v.z + "}");
         }
         // println(mandelbrot.size());
     }
     
-void keyPressed() {
-    output.flush(); // Writes the remaining data to the file
-    output.close(); // Finishes the file
-    exit(); // Stops the program
-}
+// void keyPressed() {
+//     output.flush(); // Writes the remaining data to the file
+//     output.close(); // Finishes the file
+//     exit(); // Stops the program
+// }
 
