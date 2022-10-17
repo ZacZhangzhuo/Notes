@@ -100,6 +100,3 @@ void draw() {
 //     output.close(); // Finishes the file
 //     exit(); // Stops the program
 // }
-
-
-

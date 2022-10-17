@@ -49,9 +49,6 @@
 //                     Spheriacal spheriacalZ = spheriacal(zeta.x,zeta.y,zeta.z);
 //                     float newx = pow(spheriacalZ.r,n) * sin(spheriacalZ.theta * n) * cos(spheriacalZ.phi * n);
 //                     float newy = pow(spheriacalZ.r,n) * sin(spheriacalZ.theta * n) * sin(spheriacalZ.phi * n);
-//                     println ( spheriacalZ.phi)
-//                     println(n)
-//                     println(sin(spheriacalZ.phi * n))
 //                     float newz = pow(spheriacalZ.r,n) * cos(spheriacalZ.theta * n);
 
 //                     zeta.x = newx + x;
@@ -103,8 +100,6 @@
 // //     output.close(); // Finishes the file
 // //     exit(); // Stops the program
 // // }
-
-
-void setup() {
-    println(sin( - 2.3561945 * 8));
-}
+ void setup(){
+    println (math.sin(30));
+ }
