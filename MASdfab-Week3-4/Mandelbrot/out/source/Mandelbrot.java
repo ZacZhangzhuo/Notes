@@ -17,11 +17,14 @@ import java.io.IOException;
 public class Mandelbrot extends PApplet {
 
 
-int DIM = 128;
+int DIM = 64;
 PeasyCam cam;
-// PrintWriter output;
+PrintWriter output;
 
 ArrayList<PVector> mandelbrot = new ArrayList<PVector>();
+// ArrayList<PVector> outMandelbrot = new ArrayList<PVector>();
+int outData[][][] = new int[DIM][DIM][DIM];
+
 class Spheriacal{
     float r, theta, phi;
     Spheriacal(float r, float theta, float phi) {
@@ -38,12 +41,13 @@ public Spheriacal spheriacal(float x, float y, float z) {
     return new Spheriacal(r, theta, phi);
 }
 
-// mandelbrot 
+
 public void setup() {
     
-    // windowMove(1200, 100);
+    
     cam = new PeasyCam(this, 500);
-    // output = createWriter("positions.txt");
+    // !output
+    output = createWriter("C:/Users/Zac/Desktop/positions.txt");
     
     // Ball
     for (int i = 0; i < DIM; i++) {
@@ -77,47 +81,52 @@ public void setup() {
                     
                     if (spheriacalZ.r > 16) {
                         if (edge)edge = false;
+                        // println (i+"x"+j+"x"+k);
+                        // outMandelbrot.add(new PVector(100 * x, 100 * y, 100 * z));
+                        outData[i][j][k] = 0;
+                        output.println(outData[i][j][k]);
                         break;
                     }
                     
                     if (interation > maxInteration) {
-                        if (!edge)
-                        {
-                            edge = true;
-                            mandelbrot.add(new PVector(100 * x, 100 * y, 100 * z));
-                        }
+                        //println (i+"x"+j+"x"+k);
+                        // if (!edge)
+                        // {
+                        // edge = true;
                         
-                        println(spheriacalZ.r);
-                        
+                        // println(new PVector(100 * x, 100 * y, 100 * z));
+                    // }
+                        // stroke(255, 255, 255);
+                        mandelbrot.add(new PVector(100 * x, 100 * y, 100 * z));
+                        outData[i][j][k] = 1;
+                        output.println(outData[i][j][k]);
                         break;
                     }
-                    
                     
                 }
             }
         }
     }
     
+    
+    // println(t);
+    // println ( DIM*DIM*DIM);
+    // println (mandelbrot.size()+outMandelbrot.size());
 }
 
 public void draw() {
     background(0);  
-    // translate(width / 2, height / 2);
-    
+    stroke(255, 255,255);
     for (PVector v : mandelbrot) {
         point(v.x, v.y, v.z);
-        stroke(255);
-        // output.println("{" + v.x + "," + v.y + "," + v.z + "}");
     }
-    // println(mandelbrot.size());
 }
 
-// void keyPressed() {
-//     output.flush(); // Writes the remaining data to the file
-//     output.close(); // Finishes the file
-//     exit(); // Stops the program
-// }
-
+public void keyPressed() {
+    output.flush(); // Writes the remaining data to the file
+    output.close(); // Finishes the file
+    exit(); // Stops the program
+}
   public void settings() {  size(600, 600, P3D); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Mandelbrot" };
