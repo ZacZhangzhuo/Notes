@@ -1,7 +1,7 @@
 import peasy.*;
-int DIM = 2;
+int DIM = 128;
 PeasyCam cam;
-// PrintWriter output;
+PrintWriter output;
 
 ArrayList<PVector> mandelbrot = new ArrayList<PVector>();
 class Spheriacal{
@@ -25,7 +25,7 @@ void setup() {
     size(600, 600, P3D);
     // windowMove(1200, 100);
     cam = new PeasyCam(this, 500);
-    // output = createWriter("positions.txt");
+    // output = createWriter("C:/Users/Zac/Desktop/positions.txt");
 
     // Ball
     for (int i = 0; i < DIM; i++) {

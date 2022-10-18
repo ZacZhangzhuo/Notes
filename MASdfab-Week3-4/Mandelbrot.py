@@ -56,12 +56,12 @@ for i in range(DIM):
 
                 iteration = iteration + 1
 
-                if (sphericalZ.r) > 16:
+                # if (sphericalZ.r) > 16:
                     # print("x")
-                    if edge:
-                        edge = False
+                    # if edge:
+                        # edge = False
                     # print (str(i)+'x'+str(j)+'x'+str(k))
-                    break
+                    # break
                 # print(iteration > maxIteration)
                 if iteration > maxIteration:
 
