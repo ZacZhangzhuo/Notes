@@ -11,29 +11,30 @@ Content
 - [An interesting note](#an-interesting-note)
 - [Processing mandelbrot set](#processing-mandelbrot-set)
 - [From processing, do mandelbrot set in Rhino](#from-processing-do-mandelbrot-set-in-rhino)
+- [Marching cubes](#marching-cubes)
 
 ---
 
 ## Axolotl Subtract
 
-![](MASdfab-Week5/MASdfab-Week5_2022-10-17-11-01-13.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-17-11-01-13.png)
 
 ## Axolotl Addition
 
-![](MASdfab-Week5/MASdfab-Week5_2022-10-17-11-12-59.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-17-11-12-59.png)
 
-![](MASdfab-Week5/MASdfab-Week5_2022-10-17-11-13-40.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-17-11-13-40.png)
 
-![](MASdfab-Week5/MASdfab-Week5_2022-10-17-11-14-19.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-17-11-14-19.png)
 
 ## Axolotl Blend
 
-![](MASdfab-Week5/MASdfab-Week5_2022-10-17-13-17-04.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-17-13-17-04.png)
 
 ## Axolotl Practice
 
-![](MASdfab-Week5/final.png)
-![](MASdfab-Week5/MASdfab-Week5_2022-10-17-14-19-23.png)
+![image](MASdfab-Week5/final.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-17-14-19-23.png)
 
 ## An interesting note
 
@@ -57,7 +58,13 @@ Content
 ```
 
 ## Processing mandelbrot set
-![](MASdfab-Week5/MASdfab-Week5_2022-10-18-17-19-19.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-14-35.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-14-46.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-09-47-21.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-09-48-32.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-09-46-53.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-09-49-14.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-18-17-19-19.png)
 ```Java
     import peasy.*;
     int DIM = 32;
@@ -66,7 +73,7 @@ Content
 
     ArrayList<PVector> mandelbrot = new ArrayList<PVector>();
     // ArrayList<PVector> outMandelbrot = new ArrayList<PVector>();
-    int outData[][][] = new int[DIM][DIM][DIM];
+    int outData[image][image][image] = new int[DIM][DIM][DIM];
 
     class Spheriacal{
         float r, theta, phi;
@@ -174,7 +181,8 @@ Content
 ```
 
 ## From processing, do mandelbrot set in Rhino
-![](MASdfab-Week5/MASdfab-Week5_2022-10-18-17-20-01.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-18-17-20-01.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-11-54-58.png)
 ```Python
 
     import mola
@@ -186,13 +194,13 @@ Content
 
 
     # ! Too tree
-    facesArray = []
-    lineArray = []
+    facesArray = [image]
+    lineArray = [image]
     for i in range(dim):
         facesArray.append(Values[dim*dim * i : dim*dim * (i + 1)])
 
     for face in facesArray:
-        tempArray = []
+        tempArray = [image]
         for i in range(dim):
             tempArray.append(face[dim * i : dim * (i + 1)])
         lineArray.append(tempArray)
@@ -210,7 +218,7 @@ Content
                 
 
     # ! Too list
-    values = []
+    values = [image]
     for i in range(dim):
         for j in range(dim):
             for k in range(dim):
@@ -225,3 +233,10 @@ Content
     outTemp = module_rhino.display_mesh(cubes)
 
 ```
+
+
+## Marching cubes
+
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-03.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-18.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-32.png)

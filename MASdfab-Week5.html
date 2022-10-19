@@ -1,0 +1,792 @@
+<!DOCTYPE html><html><head>
+      <title>MASdfab-Week5</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Zac\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html {
+  /* margin-left: 25%; */
+  /* margin-right: 25%; */
+  font-size: 16px;
+}
+
+body {
+  font-family: "source sans pro", Arial;
+  font-style: italic;
+  background-color: black;
+  scroll-behavior: smooth;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  position: relative;
+  font-weight: bold;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2.25em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: 1em;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+  text-align: left;
+}
+
+hr {
+  background-color: white;
+  height: 1px;
+  border-style: none;
+}
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #0097a7;
+  background: none;
+  font-family: "source sans pro", Arial;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 0.8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #0a0a0a;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
+  background: #0a0a0a;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #095b67;
+}
+
+.token.cdata {
+  color: #095b67;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #16c1d9;
+}
+
+.token.builtin{
+  color: #0097a7
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule {
+  color: #b3ebf2;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #b3ebf2;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0097a7;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #4dd0e1;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #80deea;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #b3ebf2;
+}
+
+.token.list {
+  color: #16c1d9;
+}
+
+.token.inserted {
+  background-color: #0a0a0a;
+  color: #095b67;
+}
+
+.token.deleted {
+  background-color: #0a0a0a;
+  color: #095b67;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+/* JSON */
+.language-json .token.property {
+  color: #16c1d9;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #16c1d9;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #16c1d9;
+}
+
+code.language-yaml {
+  color: #16c1d9;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #16c1d9;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #16c1d9;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #16c1d9;
+}
+
+.language-makefile .token.variable {
+  color: #16c1d9;
+}
+
+.language-makefile .token.builtin {
+  color: #16c1d9;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #16c1d9;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: #0a0a0a;
+  background: #0a0a0a;
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before,
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: #0a0a0a;
+  color: #16c1d9;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px #16c1d9;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="mas-dfab-week-5-generative-city">MAS dfab - Week 5 - Generative City</h1>
+
+<hr>
+<p>Content</p>
+<ul>
+<li><a href="#axolotl-subtract">Axolotl Subtract</a></li>
+<li><a href="#axolotl-addition">Axolotl Addition</a></li>
+<li><a href="#axolotl-blend">Axolotl Blend</a></li>
+<li><a href="#axolotl-practice">Axolotl Practice</a></li>
+<li><a href="#an-interesting-note">An interesting note</a></li>
+<li><a href="#processing-mandelbrot-set">Processing mandelbrot set</a></li>
+<li><a href="#from-processing-do-mandelbrot-set-in-rhino">From processing, do mandelbrot set in Rhino</a></li>
+</ul>
+<hr>
+<h2 class="mume-header" id="axolotl-subtract">Axolotl Subtract</h2>
+
+<p><img src="MASdfab-Week5/MASdfab-Week5_2022-10-17-11-01-13.png" alt></p>
+<h2 class="mume-header" id="axolotl-addition">Axolotl Addition</h2>
+
+<p><img src="MASdfab-Week5/MASdfab-Week5_2022-10-17-11-12-59.png" alt></p>
+<p><img src="MASdfab-Week5/MASdfab-Week5_2022-10-17-11-13-40.png" alt></p>
+<p><img src="MASdfab-Week5/MASdfab-Week5_2022-10-17-11-14-19.png" alt></p>
+<h2 class="mume-header" id="axolotl-blend">Axolotl Blend</h2>
+
+<p><img src="MASdfab-Week5/MASdfab-Week5_2022-10-17-13-17-04.png" alt></p>
+<h2 class="mume-header" id="axolotl-practice">Axolotl Practice</h2>
+
+<p><img src="MASdfab-Week5/final.png" alt><br>
+<img src="MASdfab-Week5/MASdfab-Week5_2022-10-17-14-19-23.png" alt></p>
+<h2 class="mume-header" id="an-interesting-note">An interesting note</h2>
+
+<pre data-role="codeBlock" data-info="Python" class="language-python">    <span class="token keyword keyword-import">import</span> math
+    <span class="token keyword keyword-print">print</span> <span class="token punctuation">(</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#-0.988031624093</span>
+    <span class="token keyword keyword-print">print</span> <span class="token punctuation">(</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">18.849556</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># Python: The outcome is -7.846124032502473e-08</span>
+</pre><pre data-role="codeBlock" data-info="Csharp" class="language-csharp">    A <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">Sin</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//-0.988032</span>
+    A <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">Sin</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">18.849556</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Csharp: The outcome is -7.8461e-8</span>
+</pre><pre data-role="codeBlock" data-info="java" class="language-java">    <span class="token function">println</span><span class="token punctuation">(</span><span class="token function">sin</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//-0.9880316</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token function">sin</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">18.849556</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Java: The outcome is -4.7699523E-8</span>
+</pre><h2 class="mume-header" id="processing-mandelbrot-set">Processing mandelbrot set</h2>
+
+<p><img src="MASdfab-Week5/MASdfab-Week5_2022-10-19-09-47-21.png" alt><br>
+<img src="MASdfab-Week5/MASdfab-Week5_2022-10-19-09-48-32.png" alt><br>
+<img src="MASdfab-Week5/MASdfab-Week5_2022-10-19-09-46-53.png" alt><br>
+<img src="MASdfab-Week5/MASdfab-Week5_2022-10-19-09-49-14.png" alt><br>
+<img src="MASdfab-Week5/MASdfab-Week5_2022-10-18-17-19-19.png" alt></p>
+<pre data-role="codeBlock" data-info="Java" class="language-java">    <span class="token keyword keyword-import">import</span> <span class="token namespace">peasy<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-int">int</span> DIM <span class="token operator">=</span> <span class="token number">32</span><span class="token punctuation">;</span>
+    <span class="token class-name">PeasyCam</span> cam<span class="token punctuation">;</span>
+    <span class="token class-name">PrintWriter</span> output<span class="token punctuation">;</span>
+
+    <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PVector</span><span class="token punctuation">&gt;</span></span> mandelbrot <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">PVector</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// ArrayList&lt;PVector&gt; outMandelbrot = new ArrayList&lt;PVector&gt;();</span>
+    <span class="token keyword keyword-int">int</span> outData<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token keyword keyword-int">int</span><span class="token punctuation">[</span>DIM<span class="token punctuation">]</span><span class="token punctuation">[</span>DIM<span class="token punctuation">]</span><span class="token punctuation">[</span>DIM<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-class">class</span> <span class="token class-name">Spheriacal</span><span class="token punctuation">{</span>
+        <span class="token keyword keyword-float">float</span> r<span class="token punctuation">,</span> theta<span class="token punctuation">,</span> phi<span class="token punctuation">;</span>
+        <span class="token class-name">Spheriacal</span><span class="token punctuation">(</span><span class="token keyword keyword-float">float</span> r<span class="token punctuation">,</span> <span class="token keyword keyword-float">float</span> theta<span class="token punctuation">,</span> <span class="token keyword keyword-float">float</span> phi<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>r <span class="token operator">=</span> r<span class="token punctuation">;</span>
+            <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>theta <span class="token operator">=</span> theta<span class="token punctuation">;</span>
+            <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>phi <span class="token operator">=</span> phi<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token class-name">Spheriacal</span> <span class="token function">spheriacal</span><span class="token punctuation">(</span><span class="token keyword keyword-float">float</span> x<span class="token punctuation">,</span> <span class="token keyword keyword-float">float</span> y<span class="token punctuation">,</span> <span class="token keyword keyword-float">float</span> z<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword keyword-float">float</span> r <span class="token operator">=</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>x <span class="token operator">*</span> x <span class="token operator">+</span> y <span class="token operator">*</span> y <span class="token operator">+</span> z <span class="token operator">*</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-float">float</span> theta <span class="token operator">=</span> <span class="token function">atan2</span><span class="token punctuation">(</span><span class="token function">sqrt</span><span class="token punctuation">(</span>x <span class="token operator">*</span> x <span class="token operator">+</span> y <span class="token operator">*</span> y<span class="token punctuation">)</span><span class="token punctuation">,</span> z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-float">float</span> phi <span class="token operator">=</span> <span class="token function">atan2</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">Spheriacal</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> theta<span class="token punctuation">,</span> phi<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword keyword-void">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">size</span><span class="token punctuation">(</span><span class="token number">600</span><span class="token punctuation">,</span> <span class="token number">600</span><span class="token punctuation">,</span> P3D<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        cam <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">PeasyCam</span><span class="token punctuation">(</span><span class="token keyword keyword-this">this</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// !output</span>
+        <span class="token comment">// output = createWriter(&quot;C:/Users/Zac/Desktop/positions.txt&quot;);</span>
+        
+        <span class="token comment">// Ball</span>
+        <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> DIM<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> DIM<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword keyword-boolean">boolean</span> edge <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-int">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> DIM<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword keyword-float">float</span> x <span class="token operator">=</span> <span class="token function">map</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>DIM<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword keyword-float">float</span> y <span class="token operator">=</span> <span class="token function">map</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>DIM<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword keyword-float">float</span> z <span class="token operator">=</span> <span class="token function">map</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span>DIM<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    
+                    <span class="token class-name">PVector</span> zeta <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">PVector</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    
+                    
+                    <span class="token keyword keyword-int">int</span> interation <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                    <span class="token keyword keyword-int">int</span> maxInteration <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+                    
+                    <span class="token keyword keyword-int">int</span> n <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+                    
+                    <span class="token keyword keyword-while">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        
+                        <span class="token class-name">Spheriacal</span> spheriacalZ <span class="token operator">=</span> <span class="token function">spheriacal</span><span class="token punctuation">(</span>zeta<span class="token punctuation">.</span>x<span class="token punctuation">,</span>zeta<span class="token punctuation">.</span>y<span class="token punctuation">,</span>zeta<span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword keyword-float">float</span> newx <span class="token operator">=</span> <span class="token function">pow</span><span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>r<span class="token punctuation">,</span>n<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">sin</span><span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>theta <span class="token operator">*</span> n<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">cos</span><span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>phi <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword keyword-float">float</span> newy <span class="token operator">=</span> <span class="token function">pow</span><span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>r<span class="token punctuation">,</span>n<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">sin</span><span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>theta <span class="token operator">*</span> n<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">sin</span><span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>phi <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        <span class="token keyword keyword-float">float</span> newz <span class="token operator">=</span> <span class="token function">pow</span><span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>r<span class="token punctuation">,</span>n<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">cos</span><span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>theta <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        
+                        zeta<span class="token punctuation">.</span>x <span class="token operator">=</span> newx <span class="token operator">+</span> x<span class="token punctuation">;</span>
+                        zeta<span class="token punctuation">.</span>y <span class="token operator">=</span> newy <span class="token operator">+</span> y<span class="token punctuation">;</span>
+                        zeta<span class="token punctuation">.</span>z <span class="token operator">=</span> newz <span class="token operator">+</span> z<span class="token punctuation">;</span>
+                        
+                        interation<span class="token operator">++</span><span class="token punctuation">;</span>
+                        
+                        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>spheriacalZ<span class="token punctuation">.</span>r <span class="token operator">&gt;</span> <span class="token number">16</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>edge<span class="token punctuation">)</span>edge <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                            <span class="token comment">// println (i+&quot;x&quot;+j+&quot;x&quot;+k);</span>
+                            <span class="token comment">// outMandelbrot.add(new PVector(100 * x, 100 * y, 100 * z));</span>
+                            outData<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                            <span class="token comment">// output.println(outData[i][j][k]);</span>
+                            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                        
+                        <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>interation <span class="token operator">&gt;</span> maxInteration<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token comment">//println (i+&quot;x&quot;+j+&quot;x&quot;+k);</span>
+                            <span class="token comment">// if (!edge)</span>
+                            <span class="token comment">// {</span>
+                            <span class="token comment">// edge = true;</span>
+                            
+                            <span class="token comment">// println(new PVector(100 * x, 100 * y, 100 * z));</span>
+                        <span class="token comment">// }</span>
+                            <span class="token comment">// stroke(255, 255, 255);</span>
+                            mandelbrot<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword keyword-new">new</span> <span class="token class-name">PVector</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">*</span> x<span class="token punctuation">,</span> <span class="token number">100</span> <span class="token operator">*</span> y<span class="token punctuation">,</span> <span class="token number">100</span> <span class="token operator">*</span> z<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                            outData<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                            <span class="token comment">// output.println(outData[i][j][k]);</span>
+                            <span class="token keyword keyword-break">break</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                        
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        
+        
+        <span class="token comment">// println(t);</span>
+        <span class="token comment">// println ( DIM*DIM*DIM);</span>
+        <span class="token comment">// println (mandelbrot.size()+outMandelbrot.size());</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-void">void</span> <span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">background</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+        <span class="token function">stroke</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token class-name">PVector</span> v <span class="token operator">:</span> mandelbrot<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">point</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span>x<span class="token punctuation">,</span> v<span class="token punctuation">.</span>y<span class="token punctuation">,</span> v<span class="token punctuation">.</span>z<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// void keyPressed() {</span>
+    <span class="token comment">//     output.flush(); // Writes the remaining data to the file</span>
+    <span class="token comment">//     output.close(); // Finishes the file</span>
+    <span class="token comment">//     exit(); // Stops the program</span>
+    <span class="token comment">// }</span>
+
+</pre><h2 class="mume-header" id="from-processing-do-mandelbrot-set-in-rhino">From processing, do mandelbrot set in Rhino</h2>
+
+<p><img src="MASdfab-Week5/MASdfab-Week5_2022-10-18-17-20-01.png" alt></p>
+<pre data-role="codeBlock" data-info="Python" class="language-python">    <span class="token keyword keyword-import">import</span> mola
+    <span class="token keyword keyword-import">import</span> math
+    <span class="token keyword keyword-from">from</span> mola <span class="token keyword keyword-import">import</span> module_rhino
+    <span class="token keyword keyword-from">from</span> ghpythonlib <span class="token keyword keyword-import">import</span> treehelpers
+
+    dim <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>Values<span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">0.0001</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+    <span class="token comment"># ! Too tree</span>
+    facesArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    lineArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>dim<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        facesArray<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Values<span class="token punctuation">[</span>dim<span class="token operator">*</span>dim <span class="token operator">*</span> i <span class="token punctuation">:</span> dim<span class="token operator">*</span>dim <span class="token operator">*</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword keyword-for">for</span> face <span class="token keyword keyword-in">in</span> facesArray<span class="token punctuation">:</span>
+        tempArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>dim<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            tempArray<span class="token punctuation">.</span>append<span class="token punctuation">(</span>face<span class="token punctuation">[</span>dim <span class="token operator">*</span> i <span class="token punctuation">:</span> dim <span class="token operator">*</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        lineArray<span class="token punctuation">.</span>append<span class="token punctuation">(</span>tempArray<span class="token punctuation">)</span>
+    <span class="token comment"># ! End to tree</span>
+
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>dim<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-for">for</span> j <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>dim<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-for">for</span> k <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>dim<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                lineArray<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span>
+                lineArray<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token number">0</span>
+                lineArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span>
+                lineArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token number">0</span>
+                lineArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span>
+                lineArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span><span class="token number">0</span>
+                
+
+    <span class="token comment"># ! Too list</span>
+    values <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>dim<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-for">for</span> j <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>dim<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-for">for</span> k <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>dim<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                values<span class="token punctuation">.</span>append<span class="token punctuation">(</span>lineArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token punctuation">)</span>
+    <span class="token comment"># x = treehelpers.list_to_tree(lineArray)</span>
+
+    <span class="token comment"># print (len(values))</span>
+    cubes <span class="token operator">=</span> mola<span class="token punctuation">.</span>mesh_marching_cubes<span class="token punctuation">(</span>dim<span class="token punctuation">,</span> dim<span class="token punctuation">,</span> dim<span class="token punctuation">,</span> values<span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span>
+    cubes<span class="token punctuation">.</span>update_topology<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    mola<span class="token punctuation">.</span>color_faces_by_vertical_angle<span class="token punctuation">(</span>cubes<span class="token punctuation">.</span>faces<span class="token punctuation">)</span>
+
+    outTemp <span class="token operator">=</span> module_rhino<span class="token punctuation">.</span>display_mesh<span class="token punctuation">(</span>cubes<span class="token punctuation">)</span>
+
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
