@@ -12,6 +12,8 @@ Content
 - [Processing mandelbrot set](#processing-mandelbrot-set)
 - [From processing, do mandelbrot set in Rhino](#from-processing-do-mandelbrot-set-in-rhino)
 - [Marching cubes](#marching-cubes)
+- [Fractal Facade](#fractal-facade)
+- [Python read/write](#python-readwrite)
 
 ---
 
@@ -75,20 +77,20 @@ Content
     // ArrayList<PVector> outMandelbrot = new ArrayList<PVector>();
     int outData[image][image][image] = new int[DIM][DIM][DIM];
 
-    class Spheriacal{
+    class Spherical{
         float r, theta, phi;
-        Spheriacal(float r, float theta, float phi) {
+        Spherical(float r, float theta, float phi) {
             this.r = r;
             this.theta = theta;
             this.phi = phi;
         }
     }
 
-    Spheriacal spheriacal(float x, float y, float z) {
+    Spherical spherical(float x, float y, float z) {
         float r = sqrt(x * x + y * y + z * z);
         float theta = atan2(sqrt(x * x + y * y), z);
         float phi = atan2(y,x);
-        return new Spheriacal(r, theta, phi);
+        return new Spherical(r, theta, phi);
     }
 
 
@@ -118,10 +120,10 @@ Content
                     
                     while(true) {
                         
-                        Spheriacal spheriacalZ = spheriacal(zeta.x,zeta.y,zeta.z);
-                        float newx = pow(spheriacalZ.r,n) * sin(spheriacalZ.theta * n) * cos(spheriacalZ.phi * n);
-                        float newy = pow(spheriacalZ.r,n) * sin(spheriacalZ.theta * n) * sin(spheriacalZ.phi * n);
-                        float newz = pow(spheriacalZ.r,n) * cos(spheriacalZ.theta * n);
+                        Spherical sphericalZ = spherical(zeta.x,zeta.y,zeta.z);
+                        float newx = pow(sphericalZ.r,n) * sin(sphericalZ.theta * n) * cos(sphericalZ.phi * n);
+                        float newy = pow(sphericalZ.r,n) * sin(sphericalZ.theta * n) * sin(sphericalZ.phi * n);
+                        float newz = pow(sphericalZ.r,n) * cos(sphericalZ.theta * n);
                         
                         zeta.x = newx + x;
                         zeta.y = newy + y;
@@ -129,7 +131,7 @@ Content
                         
                         interation++;
                         
-                        if (spheriacalZ.r > 16) {
+                        if (sphericalZ.r > 16) {
                             if (edge)edge = false;
                             // println (i+"x"+j+"x"+k);
                             // outMandelbrot.add(new PVector(100 * x, 100 * y, 100 * z));
@@ -182,7 +184,6 @@ Content
 
 ## From processing, do mandelbrot set in Rhino
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-18-17-20-01.png)
-![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-11-54-58.png)
 ```Python
 
     import mola
@@ -240,3 +241,60 @@ Content
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-03.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-18.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-32.png)
+
+
+## Fractal Facade
+
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-17-56-16.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-17-56-31.png)
+![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-20-29-38.png)
+
+
+```Python
+import mola
+from mola import module_rhino
+import Rhino.Geometry as rg
+import Rhino.Geometry.Intersect as intersection
+import zorse
+
+theMesh = module_rhino.mesh_from_rhino_mesh(inTemp)
+for vertex in theMesh.vertices:
+    ray = rg.Ray3d(rg.Point3d(0, 0, 0), rg.Vector3d(vertex.x, vertex.y, vertex.z))
+    intersectionPoint = intersection.Intersection.MeshRay(inTempMesh, ray)
+    # print(type(intersectionPoint))
+
+    intersectionPoint = ray.PointAt(intersectionPoint)  # type: ignore
+    vertex.x = intersectionPoint.X + vertex.x
+    vertex.y = intersectionPoint.Y + vertex.y
+    vertex.z = intersectionPoint.Z + vertex.z
+    # print(intersectionPoint)
+
+
+theMesh.update_topology()
+mola.color_faces_by_vertical_angle(theMesh.faces)
+
+outTemp = module_rhino.display_mesh(theMesh)
+
+```
+
+## Python read/write 
+
+```Python
+html = open(file_path, "r", encoding="utf-8")
+htmlTexts = html.read()
+
+html = open(file_path, "w", encoding="utf-8")
+html.write(htmlTexts)
+
+DIM32 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM32.csv"
+DIM64 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM64.csv"
+DIM128 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM128.csv"
+data = []
+with open(DIM32)as f:
+    reader = csv.reader(f)
+    # headers = next(reader)
+    # print(headers)
+    for row in reader:
+        data.append(row)
+```
+

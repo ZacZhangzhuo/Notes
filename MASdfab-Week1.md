@@ -92,7 +92,7 @@ myMessage = Message
 
 ## 10. <a name='Flaginthewind'></a>Flag in the wind
 
-![](MASdfab-Week1/2022-09-22_15-14-01.gif)
+![image](MASdfab-Week1/2022-09-22_15-14-01.gif)
 
 ```Python
     # This script is to generate a flag animation
@@ -153,9 +153,9 @@ myMessage = Message
 
 ## 11. <a name='Chineseflag'></a>Chinese flag
 
-![](MASdfab-Week1/2022-09-23-09-05-27.png)
+![image](MASdfab-Week1/2022-09-23-09-05-27.png)
 
-![](MASdfab-Week1/2022-09-23-09-08-41.png)
+![image](MASdfab-Week1/2022-09-23-09-08-41.png)
 
 ```Python
    # Import
@@ -259,7 +259,7 @@ myMessage = Message
 
 ![Nautilus.jpg](MASdfab-Week1/Nautilus.jpg)
 
-![](MASdfab-Week1/Nautilus.png)
+![image](MASdfab-Week1/Nautilus.png)
 
 ```Python
     # IMPORT

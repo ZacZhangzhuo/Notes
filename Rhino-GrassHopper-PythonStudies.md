@@ -41,9 +41,9 @@ Contents
 
 - Dot Product and Cross Product: The dot product of two non-zero unit vectors equals the cosine of the angle between them. The cross product takes two vectors and produces a third vector that is orthogonal to both.
 
-  ![](Rhino-GrassHopper-PythonStudies/2022-09-11-13-00-14.png)
+  ![image](Rhino-GrassHopper-PythonStudies/2022-09-11-13-00-14.png)
 
-  ![](Rhino-GrassHopper-PythonStudies/2022-09-11-13-00-33.png)
+  ![image](Rhino-GrassHopper-PythonStudies/2022-09-11-13-00-33.png)
 
   ```Csharp
   // In Csharp, it is like:
@@ -181,7 +181,7 @@ Follow these tutorials of 3a and 3b:
   ```
 
 - Help and prompts: the component proved help when you input "("
-  ![](Rhino-GrassHopper-PythonStudies/2022-09-04-14-30-05.png)
+  ![image](Rhino-GrassHopper-PythonStudies/2022-09-04-14-30-05.png)
 
 - Range function
 
@@ -374,6 +374,6 @@ Follow these tutorials of 3a and 3b:
     Dots = dots
 ```
 
-- ![](Rhino-GrassHopper-PythonStudies/2022-09-11-12-46-33.png)
+- ![image](Rhino-GrassHopper-PythonStudies/2022-09-11-12-46-33.png)
 
-- ![](Rhino-GrassHopper-PythonStudies/2022-09-11_12-55-22.gif)
+- ![image](Rhino-GrassHopper-PythonStudies/2022-09-11_12-55-22.gif)

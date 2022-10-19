@@ -12,7 +12,6 @@
 - [Mola exercise 2](#mola-exercise-2)
 - [Mola group](#mola-group)
 - [Mola exercise 3](#mola-exercise-3)
-- [](#)
 
 ---
 
@@ -197,7 +196,7 @@ https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface
 
 ## Mola exercise 2
 
-![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-14-31-58.png)
+![image](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-14-31-58.png)
 
 ```python
     import Rhino.Geometry as rg
@@ -234,7 +233,7 @@ https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface
 
 ## Mola exercise 3
 
-![](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-16-54-33.png)
+![image](MASdfab-Week3-4/MASdfab-Week3-4_2022-10-11-16-54-33.png)
 
 ```python
     import mola
@@ -317,9 +316,3 @@ https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface
 
     Mesh = mola.module_rhino.display_mesh(mMesh)
 ```
-
-## 
-
-City density
-Monuments 
-Typologies

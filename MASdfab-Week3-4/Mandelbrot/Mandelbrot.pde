@@ -1,5 +1,5 @@
 import peasy.*;
-int DIM = 32;
+int DIM = 64;
 PeasyCam cam;
 PrintWriter output;
 
@@ -29,7 +29,7 @@ void setup() {
     
     cam = new PeasyCam(this, 500);
     // !output
-    // output = createWriter("C:/Users/Zac/Desktop/positions.txt");
+    // output = createWriter("C:\\Zac\\19 Github\\Notes\\MASdfab-Week5\\DIM"+DIM+".csv");
     
     // Ball
     for (int i = 0; i < DIM; i++) {
@@ -66,7 +66,7 @@ void setup() {
                         // println (i+"x"+j+"x"+k);
                         // outMandelbrot.add(new PVector(100 * x, 100 * y, 100 * z));
                         outData[i][j][k] = 0;
-                        // output.println(outData[i][j][k]);
+                        output.println(outData[i][j][k]);
                         break;
                     }
                     
@@ -81,7 +81,7 @@ void setup() {
                         // stroke(255, 255, 255);
                         mandelbrot.add(new PVector(100 * x, 100 * y, 100 * z));
                         outData[i][j][k] = 1;
-                        // output.println(outData[i][j][k]);
+                        output.println(outData[i][j][k]);
                         break;
                     }
                     
@@ -104,8 +104,8 @@ void draw() {
     }
 }
 
-// void keyPressed() {
-//     output.flush(); // Writes the remaining data to the file
-//     output.close(); // Finishes the file
-//     exit(); // Stops the program
-// }
+void keyPressed() {
+    output.flush(); // Writes the remaining data to the file
+    output.close(); // Finishes the file
+    exit(); // Stops the program
+}
