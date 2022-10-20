@@ -16,14 +16,6 @@ def Distance(vertex1, vertex2):
     )
 
 
-def DecreaseAbs(Number1, Decrease):
-    if Number1 < 0:
-        Number1 = Number1 + Decrease
-    else:
-        Number1 = Number1 - Decrease
-    return Number1
-
-
 DIM32 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM32.csv"
 DIM64 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM64.csv"
 DIM128 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM128.csv"
@@ -89,17 +81,48 @@ for vertex in cubes.vertices:
 
 
 for vertex in cubes.vertices:
-    ray = rg.Ray3d(rg.Point3d(0, 0, 0), rg.Vector3d(vertex.x, vertex.y, vertex.z))
+    vec = rg.Vector3d(vertex.x, vertex.y, vertex.z)
+    vec.Unitize()
+    ray = rg.Ray3d(rg.Point3d(0, 0, 0), vec)
     intersectionPoint = intersection.Intersection.MeshRay(inTemp, ray)
 
+    intersectionPoint = ray.PointAt(intersectionPoint - distance)  # type: ignore
+    vertex.x = intersectionPoint.X + vertex.x
+    vertex.y = intersectionPoint.Y + vertex.y
+    vertex.z = intersectionPoint.Z + vertex.z
+
+# Roughness
+for vertex in cubes.vertices:
+    vec = rg.Vector3d(vertex.x, vertex.y, vertex.z)
+    vec.Unitize()
+    ray = rg.Ray3d(rg.Point3d(0, 0, 0), vec)
+    intersectionPoint = intersection.Intersection.MeshRay(inTemp, ray)
     intersectionPoint = ray.PointAt(intersectionPoint)  # type: ignore
-    vertex.x = intersectionPoint.X + vertex.x*0.1
-    vertex.y = intersectionPoint.Y  + vertex.y*0.1
-    vertex.z = intersectionPoint.Z  +vertex.z*0.1
-    
-print (DecreaseAbs(10, 10))
+    vertex.x += (vertex.x - intersectionPoint.X) * xRoughness
+    vertex.y += (vertex.y - intersectionPoint.Y) * yRoughness
+    vertex.z += (vertex.z - intersectionPoint.Z) * zRoughness
 
 cubes.update_topology()
-mola.color_faces_by_vertical_angle(cubes.faces)
+
+# Color code
+# colorPara = []
+# greatestNumber = 0
+# smallestNumber = 1000000000000000000000000000000000000000000
+# for face in cubes.faces:
+#     para = Distance(face.center(), Center)
+#     colorPara.append(para)
+#     if para > greatestNumber:
+#         greatestNumber = para
+#     if para < smallestNumber:
+#         smallestNumber = para
+
+# rever
+# colors = []
+# for i in range(len(colorPara)):
+#     para = int((colorPara[i] - smallestNumber) / (greatestNumber - smallestNumber) * 10)
+#     colors.append([Colors[para].R/255, Colors[para].G/255, Colors[para].B/255])
+#     cubes.faces[i].color =colors [i]
+
+# outTemp = colors[0]
 
 outTemp = module_rhino.display_mesh(cubes)
