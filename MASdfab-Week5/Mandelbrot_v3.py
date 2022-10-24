@@ -15,10 +15,10 @@ def Distance(vertex1, vertex2):
         0.5,
     )
 
-
-DIM32 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM32.csv"
-DIM64 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM64.csv"
-DIM128 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM128.csv"
+DIM32 = Location
+#DIM32 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM32.csv"
+#DIM64 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM64.csv"
+#DIM128 = r"C:\Zac\19 Github\Notes\MASdfab-Week5\DIM128.csv"
 
 data = []
 with open(DIM32) as f:

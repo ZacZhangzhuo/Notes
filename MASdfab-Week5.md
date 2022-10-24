@@ -60,6 +60,7 @@ Content
 ```
 
 ## Processing mandelbrot set
+
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-14-35.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-14-46.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-09-47-21.png)
@@ -67,6 +68,7 @@ Content
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-09-46-53.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-09-49-14.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-18-17-19-19.png)
+
 ```Java
     import peasy.*;
     int DIM = 32;
@@ -96,11 +98,11 @@ Content
 
     void setup() {
         size(600, 600, P3D);
-        
+
         cam = new PeasyCam(this, 500);
         // !output
         // output = createWriter("C:/Users/Zac/Desktop/positions.txt");
-        
+
         // Ball
         for (int i = 0; i < DIM; i++) {
             for (int j = 0; j < DIM; j++) {
@@ -109,28 +111,28 @@ Content
                     float x = map(i, 0,DIM, -1,1);
                     float y = map(j, 0,DIM, -1,1);
                     float z = map(k, 0,DIM, -1,1);
-                    
+
                     PVector zeta = new PVector(0,0,0);
-                    
-                    
+
+
                     int interation = 0;
                     int maxInteration = 10;
-                    
+
                     int n = 8;
-                    
+
                     while(true) {
-                        
+
                         Spherical sphericalZ = spherical(zeta.x,zeta.y,zeta.z);
                         float newx = pow(sphericalZ.r,n) * sin(sphericalZ.theta * n) * cos(sphericalZ.phi * n);
                         float newy = pow(sphericalZ.r,n) * sin(sphericalZ.theta * n) * sin(sphericalZ.phi * n);
                         float newz = pow(sphericalZ.r,n) * cos(sphericalZ.theta * n);
-                        
+
                         zeta.x = newx + x;
                         zeta.y = newy + y;
                         zeta.z = newz + z;
-                        
+
                         interation++;
-                        
+
                         if (sphericalZ.r > 16) {
                             if (edge)edge = false;
                             // println (i+"x"+j+"x"+k);
@@ -139,13 +141,13 @@ Content
                             // output.println(outData[i][j][k]);
                             break;
                         }
-                        
+
                         if (interation > maxInteration) {
                             //println (i+"x"+j+"x"+k);
                             // if (!edge)
                             // {
                             // edge = true;
-                            
+
                             // println(new PVector(100 * x, 100 * y, 100 * z));
                         // }
                             // stroke(255, 255, 255);
@@ -154,20 +156,20 @@ Content
                             // output.println(outData[i][j][k]);
                             break;
                         }
-                        
+
                     }
                 }
             }
         }
-        
-        
+
+
         // println(t);
         // println ( DIM*DIM*DIM);
         // println (mandelbrot.size()+outMandelbrot.size());
     }
 
     void draw() {
-        background(0);  
+        background(0);
         stroke(255, 255,255);
         for (PVector v : mandelbrot) {
             point(v.x, v.y, v.z);
@@ -183,7 +185,9 @@ Content
 ```
 
 ## From processing, do mandelbrot set in Rhino
+
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-18-17-20-01.png)
+
 ```Python
 
     import mola
@@ -216,7 +220,7 @@ Content
                 lineArray[i][-1][k] =0
                 lineArray[i][j][0]=0
                 lineArray[i][j][-1] =0
-                
+
 
     # ! Too list
     values = [image]
@@ -235,20 +239,17 @@ Content
 
 ```
 
-
 ## Marching cubes
 
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-03.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-18.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-10-18-32.png)
 
-
 ## Fractal Facade
 
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-17-56-16.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-17-56-31.png)
 ![image](MASdfab-Week5/MASdfab-Week5_2022-10-19-20-29-38.png)
-
 
 ```Python
 import mola
@@ -277,7 +278,7 @@ outTemp = module_rhino.display_mesh(theMesh)
 
 ```
 
-## Python read/write 
+## Python read/write
 
 ```Python
 html = open(file_path, "r", encoding="utf-8")
@@ -297,7 +298,6 @@ with open(DIM32)as f:
     for row in reader:
         data.append(row)
 ```
-
 
 ![](MASdfab-Week5/MASdfab-Week5_2022-10-20-11-59-58.png)
 ![](MASdfab-Week5/MASdfab-Week5_2022-10-20-13-28-38.png)
@@ -433,3 +433,7 @@ outTemp = module_rhino.display_mesh(cubes)
 
 ```
 
+![](MASdfab-Week5/MASdfab-Week5_2022-10-21-10-22-57.png)
+![](MASdfab-Week5/MASdfab-Week5_2022-10-21-11-51-28.png)
+![](MASdfab-Week5/MASdfab-Week5_2022-10-21-14-18-30.png)
+![](MASdfab-Week5/MASdfab-Week5_2022-10-21-14-22-32.png)
