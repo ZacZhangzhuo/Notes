@@ -1,4 +1,4 @@
-# Windows Reinstallation Plan - 28th Oct 
+# Windows Reinstallation Plan - 28th Oct
 
 This note is for the first windows reinstallation of the laptop.
 
@@ -11,6 +11,7 @@ Content
 - [After Reinstallation: Uninstall Useless Windows Softwares](#after-reinstallation-uninstall-useless-windows-softwares)
 - [After Reinstallation: Basic Logins](#after-reinstallation-basic-logins)
 - [After Reinstallation: Applications Installation](#after-reinstallation-applications-installation)
+- [After Reinstallation: Set Windows start applications (开机启动的程序)](#after-reinstallation-set-windows-start-applications-开机启动的程序)
 - [After Reinstallation: Python Environment](#after-reinstallation-python-environment)
 - [After Reinstallation: VSCode Settings](#after-reinstallation-vscode-settings)
 - [After Reinstallation: new system backups](#after-reinstallation-new-system-backups)
@@ -41,36 +42,95 @@ Content
 - [ ] VSCode Markdown template
 - [ ] Grasshopper plugins and templates
 - [ ] Download OneNote article and abandon OneNote. Every WeChat article comes to ArchZ website
+- [ ] Figure out how to reinstall Snagit 13, Bandzip(no advertisement), Pot player
+- [ ] Download all installation packages of all softwares needed
+  
 
 ## After Reinstallation: Uninstall Useless Windows Softwares
 
+- [ ] OneNote
 - [ ]
 
 ## After Reinstallation: Basic Logins
 
 - [ ] Email
-  ![](NewWindowsPlan/NewWindowsPlan_2022-10-26-11-53-16.png)
-- [ ]
+      ![](NewWindowsPlan/NewWindowsPlan_2022-10-26-11-53-16.png)
+- [ ] Check terminal (CMD)
+- [ ] Microsoft Edge
 
 ## After Reinstallation: Applications Installation
+
 - [ ] Office (Official)
+- [ ] PowerShell
+- [ ] Chinese language package (only download for emergency, no use, Windows will be in English).
+
 
 
 - NVIDIA series:
+
   - [ ] NVIDIA FrameView SDK 1.3.8 (Check necessities)
   - [ ] NVIDIA GeForce Experience 3.26.0.154 (Check necessities)
+  - [ ] NVIDIA Control Panel (Check necessities)
+  - [ ] NVIDIA HD 音频驱动程序 1.3.39.14 (Check necessities)
+  - [ ] NVIDIA PhysX 系统软件 9.21 (Check necessities)
+  - [ ] NVIDIA USBC Driver 1.46 (Check necessities)
+  - [ ] NVIDIA 图形驱动程序 516.94 (Check necessities)
 
 - .NET series:
 
+  - [ ] Microsoft ASP.NET Core 3.1.3 - Shared FrameView
+  - [ ] Microsoft Visual C++ 2005
+  - [ ] Microsoft Visual C++ 2015-2022 Redistributable 14.32 x64
+  - [ ] Microsoft Visual C++ 2015-2022 Redistributable 14.32 x86
+  - [ ] .NET SDK 6.0.2
+  - [ ] 
+
+- Lenovo series
+
+  - [ ] Lenovo Hotkeys
+  - [ ] Facebook Messenger
+  - [ ] Thunderbolt 控制中心 (INTEL CORP)
+  - [ ] Dolby Vision
   - [ ]
 
 - Adobe suites
 
+  - [ ] Acrobat DC
+  - [ ] Illustrator
+  - [ ] Photoshop
+  - [ ] Premiere
 
 - Custom applications
   - [ ] Github Desktop
-  - [ ] 
+  - [ ] Whats App
+  - [ ] Miro
+  - [ ] TickTick (滴答清单)
+  - [ ] Google drive
+  - [ ] VSCode (stable version)
+  - [ ] TIM
+  - [ ] Slack
+  - [ ] Facebook (Edge)
+  - [ ] Zoom
+  - [ ] PrusaSlicer 2.5.0
+  - [ ] City art search
+  - [ ] DeepL
+  - [ ] HiSuite
+  - [ ] instagram (Edge)
+  - [ ] YouTube (Edge)
+  - [ ] GIT
+  - [ ] Grammarly
+  - [ ] Blender
+  - [ ] Snagit 13
+  - [ ] Bandzip(no advertisement)
+  - [ ] Pot player
+  - [ ] Rhino 7 (setting it well after installation)
+  - [ ] Unity (2020.3.20f1c1) (2019.4.36f1c1)
 
+## After Reinstallation: Set Windows start applications (开机启动的程序)
+
+- [ ] Google Drive
+- [ ] City art search
+- [ ] DeepL
 
 ## After Reinstallation: Python Environment
 
@@ -106,5 +166,7 @@ pip install Rhino-stubs
 - [ ]
 
 ## After Reinstallation: new system backups
+
 - [ ] Backup the Windows registry (注册表)
 - [ ] Create Windows system restore origin (系统还原原点)
+- [ ]
