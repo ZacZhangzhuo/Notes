@@ -8,6 +8,7 @@ Content
 
 - [Reasons](#reasons)
 - [Before Reinstallation: File Backups](#before-reinstallation-file-backups)
+- [After Reinstallation: System Settings](#after-reinstallation-system-settings)
 - [After Reinstallation: Uninstall Useless Windows Softwares](#after-reinstallation-uninstall-useless-windows-softwares)
 - [After Reinstallation: Basic Logins](#after-reinstallation-basic-logins)
 - [After Reinstallation: Applications Installation](#after-reinstallation-applications-installation)
@@ -15,6 +16,9 @@ Content
 - [After Reinstallation: Python Environment](#after-reinstallation-python-environment)
 - [After Reinstallation: VSCode Settings](#after-reinstallation-vscode-settings)
 - [After Reinstallation: new system backups](#after-reinstallation-new-system-backups)
+- [After Reinstallation: Printer Settings](#after-reinstallation-printer-settings)
+- [Useful links](#useful-links)
+- [Backup Captures](#backup-captures)
 
 ---
 
@@ -30,7 +34,7 @@ Content
   ![](NewWindowsPlan/NewWindowsPlan_2022-10-26-09-39-32.png)
 - VSCode ghC# Script Parasite cannot load since lack of .NET4.52. However, .NET4.52 cannot be installed since I have had later versions. The only way is to uninstall all the later versions then install .NET4.52.
 - 'Code Smile' appears in my laptop. Code: `0x00000000` something.
-  ![](NewWindowsPlan/NewWindowsPlan_2022-10-26-11-33-50.png)\
+  ![](NewWindowsPlan/NewWindowsPlan_2022-10-26-11-33-50.png)
 - File categorization is very important: from now on, `C:\` is only for Windows and software applications, `D:\` is for static files.
 
 ## Before Reinstallation: File Backups
@@ -38,33 +42,48 @@ Content
 - [ ] Backup all static files like `/Zac; /Photography; `
 - [ ] Backup office license
 - [ ] WIFI passwords
+- [ ] PotPlayer Skin
 - [ ] VSCode purchased plugins
 - [ ] VSCode Markdown template
+- [ ] VSCode settings (eg. paste image default location setting)
 - [ ] Grasshopper plugins and templates
 - [ ] Download OneNote article and abandon OneNote. Every WeChat article comes to ArchZ website
-- [ ] Figure out how to reinstall Snagit 13, Bandzip(no advertisement), Pot player
+- [ ] Figure out how to reinstall Snagit 13, Snagit Editor, Bandzip(no advertisement), Pot player, Snipaste
+- [ ] Backup V2Ray-Core software
 - [ ] Download all installation packages of all softwares needed
-  
+- [ ] Exit Windows Beta version
+
+## After Reinstallation: System Settings
+
+- [ ] Decide default application location
+- [ ] Initialize all settings (eg. 输入法设置)
+- [ ]
 
 ## After Reinstallation: Uninstall Useless Windows Softwares
 
 - [ ] OneNote
-- [ ]
+- [ ] OneDrive (Don't use it anymore, Google Drive will be used)
+- [ ] McFee
+- [ ] Windows 小组件
+- [ ] Xbox series
+- [ ] Windows 联系人
+- [ ] 获取帮助
+- [ ] 旧版 Windows 媒体播放器
+- [ ] 入门
+- [ ] 写字板
+- [ ] Any other useless things: do a check
 
 ## After Reinstallation: Basic Logins
 
 - [ ] Email
-      ![](NewWindowsPlan/NewWindowsPlan_2022-10-26-11-53-16.png)
 - [ ] Check terminal (CMD)
 - [ ] Microsoft Edge
 
 ## After Reinstallation: Applications Installation
 
-- [ ] Office (Official)
+- [ ] Office (Official) (Word, Excel, PowerPoint)
 - [ ] PowerShell
 - [ ] Chinese language package (only download for emergency, no use, Windows will be in English).
-
-
 
 - NVIDIA series:
 
@@ -75,15 +94,26 @@ Content
   - [ ] NVIDIA PhysX 系统软件 9.21 (Check necessities)
   - [ ] NVIDIA USBC Driver 1.46 (Check necessities)
   - [ ] NVIDIA 图形驱动程序 516.94 (Check necessities)
+  - [ ] INTEL CORP 因特尔显卡控制中心 (Check necessities)
 
 - .NET series:
 
   - [ ] Microsoft ASP.NET Core 3.1.3 - Shared FrameView
-  - [ ] Microsoft Visual C++ 2005
+  - [ ] Microsoft Visual C++ 2005 Redistributable 8.0.61101
   - [ ] Microsoft Visual C++ 2015-2022 Redistributable 14.32 x64
   - [ ] Microsoft Visual C++ 2015-2022 Redistributable 14.32 x86
   - [ ] .NET SDK 6.0.2
-  - [ ] 
+  - [ ] .NET 4.8 targeting pack
+  - [ ] .NET 4.7.1 SDK
+  - [ ] .NET 4.7.1 targeting pack
+  - [ ] Microsoft Visual C++ 2008 Redistributable 9.0.3 x64
+  - [ ] Microsoft MPI (7.1.1) (Check necessities)
+  - [ ] Microsoft Visual C++ 2005 Redistributable 8.0.59192
+  - [ ] Microsoft Visual C++ 2005 Redistributable 8.0.56336
+  - [ ] Microsoft Visual C++ 2005 Redistributable 8.0.61000
+  - [ ] Microsoft Visual C++ 2005 Redistributable 9.0.30729
+  - [ ] Microsoft Visual C++ 2010 Redistributable 10.0.4021
+  - [ ] DirectX (Check necessities)
 
 - Lenovo series
 
@@ -91,7 +121,9 @@ Content
   - [ ] Facebook Messenger
   - [ ] Thunderbolt 控制中心 (INTEL CORP)
   - [ ] Dolby Vision
-  - [ ]
+  - [ ] 联想驱动管理 2021.12.16.1101 (Check necessities) (Check link)
+  - [ ] Dolby Atoms for Gaming
+  - [ ] Realtek Audio Console (Check necessities)
 
 - Adobe suites
 
@@ -99,15 +131,19 @@ Content
   - [ ] Illustrator
   - [ ] Photoshop
   - [ ] Premiere
+  - [ ] Bridge
+  - [ ] InDesign
 
 - Custom applications
+  - [ ] Baidu NetDesk (change settings)
   - [ ] Github Desktop
   - [ ] Whats App
   - [ ] Miro
   - [ ] TickTick (滴答清单)
   - [ ] Google drive
   - [ ] VSCode (stable version)
-  - [ ] TIM
+  - [ ] GIT (Check necessities)
+  - [ ] TIM (Change TIM default record location)
   - [ ] Slack
   - [ ] Facebook (Edge)
   - [ ] Zoom
@@ -117,30 +153,47 @@ Content
   - [ ] HiSuite
   - [ ] instagram (Edge)
   - [ ] YouTube (Edge)
-  - [ ] GIT
   - [ ] Grammarly
   - [ ] Blender
   - [ ] Snagit 13
+  - [ ] Snagit Editor
   - [ ] Bandzip(no advertisement)
   - [ ] Pot player
   - [ ] Rhino 7 (setting it well after installation)
   - [ ] Unity (2020.3.20f1c1) (2019.4.36f1c1)
+  - [ ] 火绒
+  - [ ] Teams
+  - [ ] Epic
+  - [ ] Autodesk DWG TrueView
+  - [ ] Touch Designer
+  - [ ] Google Chrome
+  - [ ] V2Ray
+  - [ ] Snipaste
+  - [ ] Wangyi Cloud Music
+  - [ ] Processing
+  - [ ] WeChat (Change WeChat default record location)
+  - [ ] WeMeet
 
 ## After Reinstallation: Set Windows start applications (开机启动的程序)
 
 - [ ] Google Drive
 - [ ] City art search
 - [ ] DeepL
+- [ ] V2Ray
+- [ ] Snipaste
 
 ## After Reinstallation: Python Environment
 
-- [ ] No Anaconda?
+- [ ] Basics
 
 ```
 pip install ur-rtde
-pip install Rhino-stubs
+pip install Rhino-stubs (Also change the 'stubs' file name)
 
 ```
+
+- [ ] Compas
+- [ ]
 
 ## After Reinstallation: VSCode Settings
 
@@ -169,4 +222,30 @@ pip install Rhino-stubs
 
 - [ ] Backup the Windows registry (注册表)
 - [ ] Create Windows system restore origin (系统还原原点)
-- [ ]
+
+## After Reinstallation: Printer Settings
+- [ ] Adobe print to PDF
+- [ ] Microsoft print to PDF
+
+## Useful links
+
+- [ ] 微软Windows https://www.microsoft.com/zh-cn/software-download/windows11
+- [ ] 如何使用微软官方工具重装Windows系统？https://zhuanlan.zhihu.com/p/414089945?utm_id=0
+- [ ] 联想驱动管理 https://newsupport.lenovo.com.cn/driveDownloads_index.html
+- [ ] Windows 小工具 http://lx2021.ysepan.com/
+- [ ] 新机教程 https://www.zhihu.com/question/46945957/answer/785903684
+- [ ] 【新 机 攻 略】2020 拯救者新机上手设置和优化】 https://www.bilibili.com/video/BV1uv41117jw/?share_source=copy_web&vd_source=88d6c7daa68bf9e866db376930689e5a
+## Backup Captures
+
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-11-22.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-26-11-53-16.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-10-34.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-13-12.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-13-34.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-13-44.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-13-58.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-14-04.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-14-12.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-14-20.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-14-27.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-14-34.png)
