@@ -57,7 +57,9 @@ Content
 
 - [ ] Decide default application location
 - [ ] Initialize all settings (eg. 输入法设置)
-- [ ]
+- [ ] Turn off 小娜
+- [ ] Windows theme
+- [ ] Think about wifi/network settings
 
 ## After Reinstallation: Uninstall Useless Windows Softwares
 
@@ -121,7 +123,7 @@ Content
   - [ ] Facebook Messenger
   - [ ] Thunderbolt 控制中心 (INTEL CORP)
   - [ ] Dolby Vision
-  - [ ] 联想驱动管理 2021.12.16.1101 (Check necessities) (Check link)
+  - [ ] 联想驱动管理 2021.12.16.1101 (Check necessities)
   - [ ] Dolby Atoms for Gaming
   - [ ] Realtek Audio Console (Check necessities)
 
@@ -173,6 +175,7 @@ Content
   - [ ] Processing
   - [ ] WeChat (Change WeChat default record location)
   - [ ] WeMeet
+  - [ ] 有道词典
 
 ## After Reinstallation: Set Windows start applications (开机启动的程序)
 
@@ -237,6 +240,9 @@ pip install Rhino-stubs (Also change the 'stubs' file name)
 - [ ] 【新 机 攻 略】2020 拯救者新机上手设置和优化】 https://www.bilibili.com/video/BV1uv41117jw/?share_source=copy_web&vd_source=88d6c7daa68bf9e866db376930689e5a
 ## Backup Captures
 
+![](NewWindowsPlan/NewWindowsPlan_2022-10-28-23-13-17.png)
+![](NewWindowsPlan/NewWindowsPlan_2022-10-28-23-12-58.png)
+![](NewWindowsPlan/![](NewWindowsPlan/NewWindowsPlan_2022-10-28-23-14-29.png).png)
 ![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-11-22.png)
 ![](NewWindowsPlan/NewWindowsPlan_2022-10-26-11-53-16.png)
 ![](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-10-34.png)
