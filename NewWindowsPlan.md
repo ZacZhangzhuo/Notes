@@ -47,6 +47,7 @@ Content
 - [ ] VSCode Markdown template
 - [ ] VSCode settings (eg. paste image default location setting)
 - [ ] Grasshopper plugins and templates
+- [ ] Edge settings
 - [ ] Download OneNote article and abandon OneNote. Every WeChat article comes to ArchZ website
 - [ ] Figure out how to reinstall Snagit 13, Snagit Editor, Bandzip(no advertisement), Pot player, Snipaste
 - [ ] Backup V2Ray-Core software
@@ -79,7 +80,7 @@ Content
 
 - [ ] Email
 - [ ] Check terminal (CMD)
-- [ ] Microsoft Edge
+- [ ] Microsoft Edge (Change settings)
 
 ## After Reinstallation: Applications Installation
 
