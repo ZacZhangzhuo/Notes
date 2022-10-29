@@ -48,7 +48,6 @@ Content
 - [ ] VSCode settings (eg. paste image default location setting)
 - [ ] Grasshopper plugins and templates
 - [ ] Edge settings
-- [ ] Download OneNote article and abandon OneNote. Every WeChat article comes to ArchZ website
 - [ ] Figure out how to reinstall Snagit 13, Snagit Editor, Bandzip(no advertisement), Pot player, Snipaste
 - [ ] Backup V2Ray-Core software
 - [ ] Download all installation packages of all softwares needed
@@ -56,6 +55,7 @@ Content
 
 ## After Reinstallation: System Settings
 
+- [ ] Turn on security boot mode
 - [ ] Decide default application location
 - [ ] Initialize all settings (eg. 输入法设置)
 - [ ] Turn off 小娜
@@ -77,7 +77,7 @@ Content
 - [ ] Any other useless things: do a check
 
 ## After Reinstallation: Basic Logins
-
+- [ ] Download OneNote article and abandon OneNote. Every WeChat article comes to ArchZ website
 - [ ] Email
 - [ ] Check terminal (CMD)
 - [ ] Microsoft Edge (Change settings)
@@ -239,6 +239,7 @@ pip install Rhino-stubs (Also change the 'stubs' file name)
 - [ ] Windows 小工具 http://lx2021.ysepan.com/
 - [ ] 新机教程 https://www.zhihu.com/question/46945957/answer/785903684
 - [ ] 【新 机 攻 略】2020 拯救者新机上手设置和优化】 https://www.bilibili.com/video/BV1uv41117jw/?share_source=copy_web&vd_source=88d6c7daa68bf9e866db376930689e5a
+- [ ] Bandzip尝试无广告老版本禁用更新 https://zhuanlan.zhihu.com/p/349693729
 ## Backup Captures
 
 ![](NewWindowsPlan/NewWindowsPlan_2022-10-28-23-13-17.png)
