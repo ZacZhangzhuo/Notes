@@ -83,7 +83,7 @@ Content
 - [ ] Microsoft Edge (Change settings)
 
 ## After Reinstallation: Applications Installation
-
+- [ ] Python 3.11
 - [ ] Office (Official) (Word, Excel, PowerPoint)
 - [ ] PowerShell
 - [ ] Chinese language package (only download for emergency, no use, Windows will be in English).
