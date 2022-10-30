@@ -101,6 +101,7 @@ Content
 
 - .NET series:
 
+  - [ ] .Net 4.5.2 developer Framework
   - [ ] Microsoft ASP.NET Core 3.1.3 - Shared FrameView
   - [ ] Microsoft Visual C++ 2005 Redistributable 8.0.61101
   - [ ] Microsoft Visual C++ 2015-2022 Redistributable 14.32 x64
