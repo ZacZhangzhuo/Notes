@@ -225,7 +225,7 @@ pip install Rhino-stubs (Also change the 'stubs' file name)
 ## After Reinstallation: new system backups
 
 - [x] Backup the Windows registry (注册表)
-- [ ] Create Windows system restore origin (系统还原原点)
+- [x] Create Windows system restore origin (系统还原原点)
 
 ## After Reinstallation: Printer Settings
 - [x] Adobe print to PDF
@@ -244,7 +244,7 @@ pip install Rhino-stubs (Also change the 'stubs' file name)
 
 ![image](NewWindowsPlan/NewWindowsPlan_2022-10-28-23-13-17.png)
 ![image](NewWindowsPlan/NewWindowsPlan_2022-10-28-23-12-58.png)
-![image](NewWindowsPlan/NewWindowsPlan_2022-10-28-23-14-29.png).png)
+![image](NewWindowsPlan/NewWindowsPlan_2022-10-28-23-14-29.png)
 ![image](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-11-22.png)
 ![image](NewWindowsPlan/NewWindowsPlan_2022-10-26-11-53-16.png)
 ![image](NewWindowsPlan/NewWindowsPlan_2022-10-27-21-10-34.png)
