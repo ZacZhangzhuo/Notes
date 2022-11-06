@@ -11,6 +11,7 @@ Contents
 - [What you can do](#what-you-can-do)
 - [JSON 与 XML：](#json-与-xml)
 - [JSON 与 CSV:](#json-与-csv)
+- [为什么使用大写命名法](#为什么使用大写命名法)
 
 ---
 
@@ -69,3 +70,8 @@ JSON 与 XML 的不同之处：
 - JSON 结构比 CSV 灵活得多，因此解析起来要复杂得多。 每个元素可以无限包含子元素。 JSON 还定义了几种不同的类型。 值可以是字符串，数字，true，false，null，对象或数组。 数组包含 0 个或多个 value 元素。 对象包含键值对，其中键是字符串，并且值如上定义。
 
   ![](7_MASdfab_Week7/7_MASdfab_Week7_2022-11-04-10-15-53.png)
+
+
+  ## 为什么使用大写命名法
+  - ![](7_MASdfab_Week7/7_MASdfab_Week7_2022-11-06-12-07-37.png)
+  - ![](7_MASdfab_Week7/7_MASdfab_Week7_2022-11-06-12-07-50.png)
