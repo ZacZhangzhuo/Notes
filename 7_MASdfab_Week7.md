@@ -12,6 +12,7 @@ Contents
 - [JSON 与 XML：](#json-与-xml)
 - [JSON 与 CSV:](#json-与-csv)
 - [为什么使用大写命名法](#为什么使用大写命名法)
+- [os.path.relpath](#ospathrelpath)
 
 ---
 
@@ -75,3 +76,28 @@ JSON 与 XML 的不同之处：
   ## 为什么使用大写命名法
   - ![](7_MASdfab_Week7/7_MASdfab_Week7_2022-11-06-12-07-37.png)
   - ![](7_MASdfab_Week7/7_MASdfab_Week7_2022-11-06-12-07-50.png)
+
+  ## os.path.relpath
+```Python
+  # Python program to explain os.path.relpath() method 
+      
+  # importing os module 
+  import os
+    
+  # Path
+  path = "/home / User / Desktop / file.txt"
+    
+  # Path of Start directory
+  start = "/home / User"
+    
+  # Compute the relative file path
+  # to the given path from the 
+  # the given start directory.
+  relative_path = os.path.relpath(path, start)
+    
+  # Print the relative file path
+  # to the given path from the 
+  # the given start directory.
+  print(relative_path)
+```
+- 语法:os.path.relpath(path, start =os.curdir)。参数: path:表示文件系统路径的类路径对象。start(可选):表示文件系统路径的类路径对象。给定路径的相对路径将相对于start所指示的目录进行计算。这个参数的默认值是os.curdir，它是操作系统用来引用当前目录的常量字符串。类路径对象是表示路径的字符串或字节对象。返回类型:该方法返回一个字符串值，表示从起始目录到给定路径的相对文件路径。

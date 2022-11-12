@@ -238,12 +238,12 @@ Follow these tutorials of 3a and 3b:
 
 - Traversal (for loop)
   ```Python
-  #Below is like 'foreach loop' in C#
-  for i in list_num
-      print i
-  # Below is like 'for loop' in C#
-  for i in range(len(list_num))
-      print list_num[i]
+    #Below is like 'foreach loop' in C#
+    for i in list_num
+        print i
+    # Below is like 'for loop' in C#
+    for i in range(len(list_num))
+        print list_num[i]
   ```
 
 # GhPython Exercise Snake Game
