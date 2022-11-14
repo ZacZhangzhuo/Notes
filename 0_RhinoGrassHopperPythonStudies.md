@@ -15,7 +15,7 @@ Contents
 - [GhPython Component and Python Script](#ghpython-component-and-python-script)<!--Finished-->
 - [GhPython Exercise: Snake Game](#ghpython-exercise-snake-game)
 
----
+    ---
 
 # Essential Mathematics for Computational Design
 
