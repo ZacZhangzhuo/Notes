@@ -43,6 +43,8 @@ Above: to prevent the shrinkage and span of the 3D printing object
 ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-16-10-32-07.png)
 Above: Eggshell pavilion of MAS 2022
 
+![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-16-10-39-57.png)
+Above: Eggshell pavilion of MAS 2022
 
 
 ## Arduino
