@@ -29,32 +29,32 @@ Contents
 
 - A unit vector is a vector whose length is equal to one unit
 
-  ```Csharp
-      // In GH C#, unit vector can be assigned in this way:
-      Vector3d a = new Vector3d ();
-      a = Vector3d.XAxis;
-      a = Vector3d.YAxis;
-      a = Vector3d.ZAxis;
-      // In addition, zero vector is in this way:
-      a = Vector3d.Zero;
-  ```
+```Csharp
+    // In GH C#, unit vector can be assigned in this way:
+    Vector3d a = new Vector3d ();
+    a = Vector3d.XAxis;
+    a = Vector3d.YAxis;
+    a = Vector3d.ZAxis;
+    // In addition, zero vector is in this way:
+    a = Vector3d.Zero;
+```
 
 - Dot Product and Cross Product: The dot product of two non-zero unit vectors equals the cosine of the angle between them. The cross product takes two vectors and produces a third vector that is orthogonal to both.
 
-  ![image](Rhino-GrassHopper-PythonStudies/2022-09-11-13-00-14.png)
+![image](Rhino-GrassHopper-PythonStudies/2022-09-11-13-00-14.png)
 
-  ![image](Rhino-GrassHopper-PythonStudies/2022-09-11-13-00-33.png)
+![image](Rhino-GrassHopper-PythonStudies/2022-09-11-13-00-33.png)
 
-  ```Csharp
-  // In Csharp, it is like:
-  Vector3d a,b;
-  c= a*b; //Dot Production;
-  c=a×b; //Cross Production;
-  ```
+```Csharp
+// In Csharp, it is like:
+Vector3d a,b;
+c= a*b; //Dot Production;
+c=a×b; //Cross Production;
+```
 
-- > Vector Mathematics: https://developer.rhino3d.com/guides/general/essential-mathematics/vector-mathematics/#15-tutorials
+- Vector Mathematics: https://developer.rhino3d.com/guides/general/essential-mathematics/vector-mathematics/#15-tutorials
 
-- > Parametric Curves and Surfaces: https://developer.rhino3d.com/guides/general/essential-mathematics/parametric-curves-surfaces/#31-parametric-curves
+- Parametric Curves and Surfaces: https://developer.rhino3d.com/guides/general/essential-mathematics/parametric-curves-surfaces/#31-parametric-curves
 
 - Hermite and Bézier curves are two examples of cubic polynomial curves that are determined by four parameters. A Hermite curve is determined by two end points and two tangent vectors at these points, while a Bézier curve is defined by four points. While they differ mathematically, they share similar characteristics and limitations.
 
@@ -80,9 +80,9 @@ Contents
 
 - A pull request (or PR) is a way to alert a repo's owners that you want to make some changes to their code. It allows them to review the code and make sure it looks good before putting your changes on the primary branch.
 
-- > Learn the concept of Branch System of Git: https://learngitbranching.js.org/?locale=zh_CN or https://git-school.github.io/visualizing-git .
+- Learn the concept of Branch System of Git: https://learngitbranching.js.org/?locale=zh_CN or https://git-school.github.io/visualizing-git .
 
-- > Additional, using git with VSCode: https://youtu.be/i_23KUAEtUM .
+- Additional, using git with VSCode: https://youtu.be/i_23KUAEtUM .
 
 # The Grasshopper Primer
 
@@ -121,23 +121,28 @@ Follow these tutorials of 3a and 3b:
 - You cannot split a statement into multiple lines in Python by pressing . Instead, use the backslash () to indicate that a statement is continued on the next line.
 
 - Sometimes, more than one statement may be put on a single line. In Python a semicolon ( ; ) can be used to separate multiple statements on the same line. For instance three statements can be written:
-  ```Python
-  y = 3; x = 5; print(x+y)
-  #Above is the same as below.
-  y = 3
-  x = 5
-  print(x+y)
-  ```
+
+```Python
+y = 3; x = 5; print(x+y)
+#Above is the same as below.
+y = 3
+x = 5
+print(x+y)
+```
 
 > **LINK** (Style Guide for Python Code) https://peps.python.org/pep-0008/
 
 # What is Rhino Python and Python Basics
 
-> **LINK** https://developer.rhino3d.com/guides/rhinopython/what-is-rhinopython/ > **LINK** https://gramaziokohler.github.io/teaching_materials/python/
+> **LINK** https://developer.rhino3d.com/guides/rhinopython/what-is-rhinopython/ 
+
+> **LINK** https://gramaziokohler.github.io/teaching_materials/python/
 
 # GhPython Component and Python Script
 
-> **LINK** https://developer.rhino3d.com/guides/rhinopython/ghpython-component/ > **LINK** https://developer.rhino3d.com/guides/rhinopython/your-first-python-script-in-grasshopper
+> **LINK** https://developer.rhino3d.com/guides/rhinopython/ghpython-component
+ 
+> **LINK** https://developer.rhino3d.com/guides/rhinopython/your-first-python-script-in-grasshopper
 
 > **LINK** (Additional Video tutorials by McNeel) https://youtu.be/l4_vIRtRUaU / https://youtu.be/qSysanmDKtI / https://youtu.be/ZGIA-fBuCV8
 
@@ -151,100 +156,102 @@ Follow these tutorials of 3a and 3b:
 
 - Import modules:
 
-  ```Python
-  import math
-  print math.pi
-  print math.pow(2,2)
-  print 2**8
-   print (math.degrees(math.pi))
-  print (math.radians(math.pi))
-  ```
+```Python
+import math
+print math.pi
+print math.pow(2,2)
+print 2**8
+ print (math.degrees(math.pi))
+print (math.radians(math.pi))
+```
 
 - Using randoms:
 
-  ```Python
-  import random
-  random_int = random.randint(10,20)
-  print random_int
-  random_float = random.uniform(10,20)
-  print random_float
-  ```
+```Python
+import random
+random_int = random.randint(10,20)
+print random_int
+random_float = random.uniform(10,20)
+print random_float
+```
 
 - Accessing item(s)
 
-  ```Python
-  first_num = num[0] #Get the first one
-  last_num = num[-1] #Get the last one
-  num[0] = 10 #Change the value of an item in the list
-  num.append(10) #Add an item
-  num.insert(a,b) #Insert an item b at No.a
-  ```
+```Python
+first_num = num[0] #Get the first one
+last_num = num[-1] #Get the last one
+num[0] = 10 #Change the value of an item in the list
+num.append(10) #Add an item
+num.insert(a,b) #Insert an item b at No.a
+```
 
 - Help and prompts: the component proved help when you input "("
-  ![image](Rhino-GrassHopper-PythonStudies/2022-09-04-14-30-05.png)
+  
+![image](Rhino-GrassHopper-PythonStudies/2022-09-04-14-30-05.png)
 
 - Range function
 
-  ```Python
-  sequence = range(1) #Crate a list [0]
-  sequence = range(5) #Crate a list from 0 to 4
-  sequence = range(3,7) #Crate a list from 3 to 6
-  oddSequence = range(1,10,2) #Crate a list [1,3,5,7,9] #range(start, stop, step)
-  ```
+```Python
+sequence = range(1) #Crate a list [0]
+sequence = range(5) #Crate a list from 0 to 4
+sequence = range(3,7) #Crate a list from 3 to 6
+oddSequence = range(1,10,2) #Crate a list [1,3,5,7,9] #range(start, stop, step)
+```
 
 - Slicing feature:
 
-  ```Python
-  print names[:2] #Print the items No1 to No2
-  print names[2:] #Print items No2 to the last
-  print names[1:3] #Print items No1 to No3
-  newNames = names[:] #Copy a list (NOT reference)
-  ```
+```Python
+print names[:2] #Print the items No1 to No2
+print names[2:] #Print items No2 to the last
+print names[1:3] #Print items No1 to No3
+newNames = names[:] #Copy a list (NOT reference)
+```
 
 - Nested list
 
-  ```Python
-  import ghpythonlib.treehelper as th
-  list_of_list = [names, nums, chars]
-  a = th.list_to_tree(list_of_list)
-  ```
+```Python
+import ghpythonlib.treehelper as th
+list_of_list = [names, nums, chars]
+a = th.list_to_tree(list_of_list)
+```
 
 - Other list functions
 
-  ```Python
-  print len(myList) #Length of a list
-  print sum(myList) #Sum of all items of the num list
-  minNum = min(nums) #min of the num list
-  maxNum = max(nums) #max of the num list
-  names.pop(0) #Remove the first item of the list
-  names.remove("1") #Remove a specific item
-  names.reverse() #Reverse a list
-  names.sort() #Sort the list numerically or alphabetically
-  ```
+```Python
+print len(myList) #Length of a list
+print sum(myList) #Sum of all items of the num list
+minNum = min(nums) #min of the num list
+maxNum = max(nums) #max of the num list
+names.pop(0) #Remove the first item of the list
+names.remove("1") #Remove a specific item
+names.reverse() #Reverse a list
+names.sort() #Sort the list numerically or alphabetically
+```
 
 - Outer indentation level:
 
-  ```Python
-  #Python uses indentation
-  # Example 1
-  for i in x:
-      print i
-      print "done!"
-  # Example 2
-  for i in x:
-      print i
-  print "done!"
-  ```
+```Python
+#Python uses indentation
+# Example 1
+for i in x:
+    print i
+    print "done!"
+# Example 2
+for i in x:
+    print i
+print "done!"
+```
 
 - Traversal (for loop)
-  ```Python
-    #Below is like 'foreach loop' in C#
-    for i in list_num
-        print i
-    # Below is like 'for loop' in C#
-    for i in range(len(list_num))
-        print list_num[i]
-  ```
+
+```Python
+  #Below is like 'foreach loop' in C#
+  for i in list_num
+      print i
+  # Below is like 'for loop' in C#
+  for i in range(len(list_num))
+      print list_num[i]
+```
 
 # GhPython Exercise Snake Game
 

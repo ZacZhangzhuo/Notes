@@ -3,45 +3,42 @@
 ---
 
 Contents:
-
-<!-- vscode-markdown-toc -->
-
-- 1. [Transformation](#Transformation)
-- 2. [Floor division operator](#Floordivisionoperator)
-- 3. [Add list to a list](#Addlisttoalist)
-- 4. [Tuple](#Tuple)
-- 5. [Dictionary](#Dictionary)
-- 6. [Enumeration](#Enumeration)
-- 7. [Zip](#Zip)
-- 8. [Multiple returns in definition](#Multiplereturnsindefinition)
-- 9. [Class](#Class)
-- 10. [Flag in the wind](#Flaginthewind)
-- 11. [Chinese flag](#Chineseflag)
-- 12. [Box class](#Boxclass)
-- 13. [Make a Nautilus](#MakeaNautilus)
+- [Transformation](#transformation)
+- [Floor division operator](#floor-division-operator)
+- [Add list to a list](#add-list-to-a-list)
+- [Tuple](#tuple)
+- [Dictionary](#dictionary)
+- [Enumeration](#enumeration)
+- [Zip](#zip)
+- [Multiple returns in definition](#multiple-returns-in-definition)
+- [Class](#class)
+- [Flag in the wind](#flag-in-the-wind)
+- [Chinese flag](#chinese-flag)
+- [Box class](#box-class)
+- [Make a Nautilus](#make-a-nautilus)
 
 ---
 
-## 1. <a name='Transformation'></a>Transformation
+## Transformation
 
 ```Python
 a = int(a)
 b = str(3.14)
 ```
 
-## 2. <a name='Floordivisionoperator'></a>Floor division operator
+## Floor division operator
 
 ```Python
 print (8//3) #answer is 2
 ```
 
-## 3. <a name='Addlisttoalist'></a>Add list to a list
+## Add list to a list
 
 ```Python
 list1.extend(list2)
 ```
 
-## 4. <a name='Tuple'></a>Tuple
+## Tuple
 
 Once created, cannot be changed
 
@@ -50,13 +47,13 @@ b = (element1, element2, ... , elementn)
 a = ("c.biancheng.net", 1, [2,'a'], ("abc",3.0))
 ```
 
-## 5. <a name='Dictionary'></a>Dictionary
+## Dictionary
 
 ```Python
 myDict = {"Name": "Zac", "Age": 23, "Gender": "Male"}
 ```
 
-## 6. <a name='Enumeration'></a>Enumeration
+## Enumeration
 
 ```Python
 for i, animals in enumeration(animals):
@@ -64,7 +61,7 @@ for i, animals in enumeration(animals):
     print (animals)
 ```
 
-## 7. <a name='Zip'></a>Zip
+## Zip
 
 ```Python
 for animal, number in zip(animals, numbers):
@@ -72,7 +69,7 @@ for animal, number in zip(animals, numbers):
     print number
 ```
 
-## 8. <a name='Multiplereturnsindefinition'></a>Multiple returns in definition
+## Multiple returns in definition
 
 ```Python
 def function ( var1, var2):
@@ -82,7 +79,7 @@ a, b = function(var1, var2)
 # a = x, b=y
 ```
 
-## 9. <a name='Class'></a>Class
+## Class
 
 ```Python
 class Message :
@@ -90,7 +87,7 @@ class Message :
 myMessage = Message
 ```
 
-## 10. <a name='Flaginthewind'></a>Flag in the wind
+## Flag in the wind
 
 ![image](MASdfab-Week1/2022-09-22_15-14-01.gif)
 
@@ -151,7 +148,7 @@ myMessage = Message
     Cross = splitted[1]
 ```
 
-## 11. <a name='Chineseflag'></a>Chinese flag
+## Chinese flag
 
 ![image](MASdfab-Week1/2022-09-23-09-05-27.png)
 
@@ -215,7 +212,7 @@ myMessage = Message
    RectangleSurface = rg.NurbsSurface.CreateFromCorners(rg.Point3d(0,0,0), rg.Point3d(flagLength,0,0), rg.Point3d(flagLength, flagWidth, 0), rg.Point3d(0,flagWidth,0))
 ```
 
-## 12. <a name='Boxclass'></a>Box class
+## Box class
 
 ```Python
     import Rhino.Geometry as rg
@@ -255,7 +252,7 @@ myMessage = Message
     Colours = colours
 ```
 
-## 13. <a name='MakeaNautilus'></a>Make a Nautilus
+## Make a Nautilus
 
 ![Nautilus.jpg](MASdfab-Week1/Nautilus.jpg)
 
