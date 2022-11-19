@@ -46,7 +46,22 @@ Above: Eggshell pavilion of MAS 2022
 ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-16-10-39-57.png)
 Above: Eggshell pavilion of MAS 2022
 
+![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-17-11-40-19.png)
 
 ## Arduino
 
+- V = IR
+- P = IV
+- E = Pt
+-
+- ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-18-10-43-19.png)
+- ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-18-10-45-38.png)
+- Phototransistor can be measure if the object is in the front of it.
+- ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-18-11-07-23.png)
+- ![](9_MASdfab_3DPrintingArchitecture/x.jpg)
+- ![](9_MASdfab_3DPrintingArchitecture/y.jpg)
+- ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-18-14-10-09.png)
 
+
+## Idea for the 'useless machine'
+- One andiron that sends the red dot to the 'canvas', but also read the image of the canvas and change its position accordingly. This device can toy with the robots (like Eureka and Dummy). 
