@@ -1,5 +1,14 @@
 # MAS dfab - 3D Printing Architecture
 
+
+- [Goal](#goal)
+- [Joris lecture](#joris-lecture)
+- [Arduino](#arduino)
+- [Idea for the 'useless machine'](#idea-for-the-useless-machine)
+- [C++ Const and Static](#c-const-and-static)
+- [3D Printer Parameters](#3d-printer-parameters)
+- [UR rtd](#ur-rtd)
+
 ## Goal
 
 - Perforation
@@ -113,4 +122,4 @@ Above: Eggshell pavilion of MAS 2022
 - ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-28-14-39-29.png)
 - ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-28-14-39-58.png)
 - ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-28-14-40-23.png)
-- ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-28-14-41-30.png)
+- ![](9_MASdfab_3DPrintingArchitecture/9_MASdfab_3DPrintingArchitecture_2022-11-28-14-41-30.png)    
