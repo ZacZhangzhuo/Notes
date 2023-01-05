@@ -3,6 +3,9 @@
 ----
 - [Introduction](#introduction)
 - [Embedded earth work](#embedded-earth-work)
+- [Computational workflow and code structures](#computational-workflow-and-code-structures)
+- [Technology](#technology)
+- [Docker](#docker)
 
 ----
 
@@ -73,3 +76,22 @@
 ![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-04-09-32-52.png)
 ![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-04-09-36-19.png)
 ![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-04-09-37-22.png)
+
+
+## Computational workflow and code structures
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-04-10-26-10.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-04-10-26-18.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-04-10-27-19.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-04-10-27-58.png)
+
+## Technology
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-04-10-40-36.png)
+
+## Docker
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-10-48-23.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-10-49-05.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-10-51-59.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-10-53-13.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-10-56-22.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-11-07-23.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-12-03-44.png)
