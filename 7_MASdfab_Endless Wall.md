@@ -13,7 +13,7 @@ Contents
 - [JSON 与 CSV:](#json-与-csv)
 - [为什么使用大写命名法](#为什么使用大写命名法)
 - [os.path.relpath](#ospathrelpath)
-- [关于 string 的 replace 方法，需要注意 replace 不会改变原 string 的内容。A](#关于-string-的-replace-方法需要注意-replace-不会改变原-string-的内容a)
+- [关于 string 的 replace 方法，需要注意 replace 不会改变原 string 的内容。](#关于-string-的-replace-方法需要注意-replace-不会改变原-string-的内容)
 - [Slice](#slice)
 
 ---
@@ -106,7 +106,7 @@ JSON 与 XML 的不同之处：
 
 - 语法:os.path.relpath(path, start =os.curdir)。参数: path:表示文件系统路径的类路径对象。start(可选):表示文件系统路径的类路径对象。给定路径的相对路径将相对于 start 所指示的目录进行计算。这个参数的默认值是 os.curdir，它是操作系统用来引用当前目录的常量字符串。类路径对象是表示路径的字符串或字节对象。返回类型:该方法返回一个字符串值，表示从起始目录到给定路径的相对文件路径。
 
-## 关于 string 的 replace 方法，需要注意 replace 不会改变原 string 的内容。A
+## 关于 string 的 replace 方法，需要注意 replace 不会改变原 string 的内容。
 
 实例：
 
