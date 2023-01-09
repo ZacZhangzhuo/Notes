@@ -6,6 +6,9 @@
 - [Computational workflow and code structures](#computational-workflow-and-code-structures)
 - [Technology](#technology)
 - [Docker](#docker)
+- [RRC Practice](#rrc-practice)
+- [Automation](#automation)
+- [Material Development](#material-development)
 
 ----
 
@@ -95,3 +98,108 @@
 ![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-10-56-22.png)
 ![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-11-07-23.png)
 ![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-05-12-03-44.png)
+
+# Compas RRC
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-13-40-39.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-13-44-06.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-13-45-00.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-13-48-54.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-13-51-04.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-13-55-51.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-01-11.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-03-38.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-05-13.png)
+
+ - operating system: ABB has only one, buy kuka has 3-4.
+ - RRC = Rapid Robot Communication
+
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-07-41.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-11-22.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-11-29.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-15-28.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-17-21.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-22-33.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-23-43.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-26-48.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-28-33.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-29-03.png)
+
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-33-58.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-34-20.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-36-55.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-38-39.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-47-35.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-52-28.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-53-17.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-53-49.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-54-42.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-14-56-40.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-03-32.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-03-43.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-04-22.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-04-34.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-05-15.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-23-28.png)
+
+
+## RRC Practice
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-37-19.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-39-08.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-15-44-53.png)
+
+## Automation
+
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-04-43.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-04-56.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-05-29.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-06-52.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-15-47.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-24-13.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-24-33.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-27-00.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-27-55.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-32-46.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-34-03.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-35-36.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-37-52.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-40-13.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-40-24.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-45-11.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-45-18.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-46-10.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/2023-01-01-09-16-47-53.jpg)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-48-22.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-49-29.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-50-49.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-51-32.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-51-48.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-54-10.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-57-11.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-16-57-59.png)
+
+
+## Material Development
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-21-03.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-22-33.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-23-48.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-24-09.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-31-36.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-32-28.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-32-59.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-33-37.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-33-56.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-34-03.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-34-29.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-34-41.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-36-18.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-43-44.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-46-14.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-46-48.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-53-39.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-55-38.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-57-13.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-58-37.png)
+![](14_MASdfab_T2_ImpactPrintedStructures/14_MASdfab_T2_ImpactPrintedStructures_2023-01-09-17-59-34.png)
+
+
+
